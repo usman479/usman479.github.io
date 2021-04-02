@@ -36,8 +36,7 @@ body {
   .developer {
     position: absolute;
     bottom: 40px;
-    left: 220px;
-    font-size: 18pt;
-    
+    left: 210px;
+    font-size: 22pt;
     color: rgb(38, 245, 183)
   }
