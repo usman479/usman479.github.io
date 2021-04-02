@@ -2,9 +2,10 @@ body {
     font-family: 'Open Sans', sans-serif;
     background-color: rgb(29, 29, 29);
     color: rgb(255, 255, 255);
+    font-size: 12px;
 }
 .about {
-    font-size: 80px;
+    font-size: 48pt;
     font-weight: bolder;
 }
 .tags {
@@ -14,5 +15,29 @@ body {
     color: rgb(38, 245, 183)
 }
 .service {
-    font-size: 50px;
+    font-size: 36pt;
 }
+.heading {
+    font-size: 18pt;
+}
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.name {
+    position: absolute;
+    bottom: 100px;
+    left: 80px;
+    font-size: 36pt;
+    font-weight: bolder;
+  }
+  .developer {
+    position: absolute;
+    bottom: 40px;
+    left: 220px;
+    font-size: 18pt;
+    
+    color: rgb(38, 245, 183)
+  }
