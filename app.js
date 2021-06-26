@@ -67,9 +67,15 @@ if (currentDate.getDate() === DOB.getDate() && currentDate.getMonth() === DOB.ge
 }
 
 
-if (currentDate.getMonth() < DOB.getMonth()) {
+if (currentDate.getMonth() === DOB.getMonth() && currentDate.getDate() > DOB.getDate()) {
+    diffMonth = 11;
+    document.write(diffMonth + " months & ")
+}
+else if (currentDate.getMonth() < DOB.getMonth()) {
     document.write(12 + diffMonth + " months & ")
-} 
+} else if (currentDate.getDate() > DOB.getDate() && currentDate.getMonth() >= DOB.getMonth()) {
+    document.write()
+}
  else {
     document.write(diffMonth + " months & ")
 }
@@ -79,8 +85,15 @@ if (currentDate.getMonth() < DOB.getMonth()) {
 
 let diffDate = currentDate.getDate() - DOB.getDate();
 
-if (currentDate.getDate() > DOB.getDate()) {
-    document.write(diffDate + " days")
-} else {
+if (currentDate.getDate() < DOB.getDate()) {
+    document.write((DOB.getDate() - currentDate.getDate()) + " days")
+}
+else if (currentDate.getDate() > DOB.getDate() && currentDate.getMonth() === DOB.getMonth()) {
+    document.write((30 - diffDate) + " days")
+}
+else if (currentDate.getDate() > DOB.getDate()) {
+    document.write((30 - diffDate) + " days")
+}
+ else {
     document.write(DOB.getDate() - currentDate.getDate() + " days")
 }
