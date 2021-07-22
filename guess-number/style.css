@@ -1,0 +1,109 @@
+.point {
+    cursor: pointer;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 90vh;
+}
+
+.inner {
+    background-color: rgb(150, 214, 243);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 70%;
+    width: 40%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px -4px black;
+}
+
+#text {
+    font-size: 1.5em;
+    font-family: sans-serif ;
+    color: black;
+    text-align: center;
+}
+
+#inp {
+    width: 8%;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    outline: none;
+    font-size: 1.5em;
+}
+
+#but {
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    outline: none;
+    padding: 10px 30px;
+    font-size: 1em;
+}
+
+#but:hover {
+    background-color: rgb(226, 226, 226);
+}
+
+.check {
+font-size: 1.2em;
+font-family: sans-serif;
+}
+
+.container {
+    border-radius: 10px;
+    background-color: rgb(149, 218, 250) !important;
+    height: 70vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 20px -3px black;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+
+}
+
+@media screen and (max-width: 620px) {
+  * {
+      font-size: 0.9em;
+  }
+  #inp {
+      width: 15%;
+  }
+
+}
+@media screen and (max-width: 560px) {
+    #inp {
+        width: 12%;
+        
+        border: none;
+        padding: 5px;
+        outline: none;
+        font-size: 2em;
+    }
+  }
+
+  @media screen and (max-width: 520px) {
+    #text {
+       font-size:  1.5em;
+    }
+  
+}
+  @media screen and (max-width: 490px) {
+    * {
+        font-size: 0.9em;
+    }
+  }
+
+
