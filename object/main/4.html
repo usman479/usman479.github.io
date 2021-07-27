@@ -5,32 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../style/style4.css">
 </head>
 <body>
-    <h1>Check Console</h1>
-    <form action="#">
+    <!-- <form action="" method="POST"> -->
         <label for="name">Name:</label>
         <input type="text" name="" id="name" >
         <br>
         <br>
         Gender:
-        <input type="text" name="" id="gender">
+        <input type="radio" name="gender" id="male" value="male" checked><label for="male">m</label>
+        <input type="radio" name="gender" id="female" value="female"><label for="female">f</label>
         <br>
         <br>
-        <label for="address">Address:</label>
-        <input type="text" id="address">
+        Address:
+        <input type="text" name="" id="address">
         <br>
         <br>
         Education:
-        <input type="text" name="" id="education">
+        <select name="education" id="education">
+            <option value="matric">Matric</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="graduate">Graduate</option>
+            <option value="masters">Masters</option>
+          </select>
         <br>
         <br>
         Profession:
-        <input type="text" name="" id="profession">
+        <select name="profession" id="profession">
+            <option value="developer">Developer</option>
+            <option value="military">Military</option>
+            <option value="labour">Labour</option>
+            <option value="actor">Actor</option>
+          </select>
         <br>
         <br>
         <button onclick="check();">Submit</button>
-      </form>
+      <!-- </form> -->
+
+      <h3>Objects are made in console</h3>
 <script src="../script/script4.js"></script>
 </body>
 </html>

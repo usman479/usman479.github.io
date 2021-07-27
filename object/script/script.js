@@ -7,7 +7,15 @@ let itemsArray = [
   { name: 'pen', price: 100, quantity: 2 }
 ];
 
-document.write(itemsArray[0].price * itemsArray[0].quantity + "<br>");
-document.write(itemsArray[1].price * itemsArray[1].quantity + "<br>");
-document.write(itemsArray[2].price * itemsArray[2].quantity + "<br>");
-document.write(itemsArray[3].price * itemsArray[3].quantity + "<br>");
+let juice = itemsArray[0].price * itemsArray[0].quantity;
+let cookie = itemsArray[1].price * itemsArray[1].quantity;
+let shirt = itemsArray[2].price * itemsArray[2].quantity;
+let pen = itemsArray[3].price * itemsArray[3].quantity;
+
+document.write("Total price of 'juice' is : " + juice + "<br> <br>");
+document.write("Total price of 'cookie' is : " + cookie + "<br> <br>");
+document.write("Total price of 'shirt' is : " + shirt + "<br> <br>");
+document.write("Total price of 'pen' is : " + pen + "<br> <br>");
+document.write("Sum of all the items is : " + (juice + cookie + shirt + pen));
+
+
