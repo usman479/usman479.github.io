@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz-Website</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+    <div class="main" id="main">
+        <div class="container">
+            <h2 id="question">Welcome To Quiz-Website</h2>
+            <ul id="list">
+                <li><input type="radio" name="answer" id="ans1" value="ans1"><label for="ans1" id="rad1">answer</label></li>
+                <li><input type="radio" name="answer" id="ans2" value="ans2"><label for="ans2" id="rad2">answer</label></li>
+                <li><input type="radio" name="answer" id="ans3" value="ans3"><label for="ans3" id="rad3">answer</label></li>
+                <li><input type="radio" name="answer" id="ans4" value="ans4"><label for="ans4" id="rad4">answer</label></li>
+            </ul>
+            <div class="but">
+                <div> <button onclick="check();" id="submit-button">Next</button></div>
+                <div> <button onclick="start();" id="start">Start</button></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="main2"><div class="result" id="result">
+        <h2>Your Test is completed</h2>
+        <h3>your score is : <span id="show-result"></span></h3>
+        <button>Start Again</button>
+    </div></div>
+    
+    <script src="./script/script.js"></script>
+</body>
+
+</html>

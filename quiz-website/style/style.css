@@ -1,0 +1,89 @@
+* {
+    font-family: sans-serif;
+}
+body {
+    background-color: rgb(194, 253, 255);
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    /* width: 100vh; */
+}
+
+.container {
+    background-color: white;
+box-shadow: 5px 5px 10px -5px black;
+   
+    padding: 10px 30px;
+    width: 50%;
+    height: 70%;
+    /* overflow: scroll; */
+}
+
+ul, li {
+   list-style-type: none;
+   padding: 7px 0;
+}
+
+button {
+
+    padding: 10px 30px;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: rgb(99, 197, 253);
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background-color:  rgb(0, 162, 255);
+    /* font-weight: bold; */
+}
+
+.but {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.result {
+    background-color: white;
+box-shadow: 5px 5px 10px -5px black;
+margin: 50px;
+width: 40%;
+height: 40%;
+padding: 10px 30px;
+text-align: center;
+
+}
+
+.result button {
+    background-color: rgb(0, 185, 77);
+}
+.result button:hover {
+    background-color: rgb(1, 82, 35);
+}
+
+#submit-button {
+    display: none;
+}
+
+#list {
+    display: none;
+}
+
+#result {
+    display: none;
+}
+
+.main2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
