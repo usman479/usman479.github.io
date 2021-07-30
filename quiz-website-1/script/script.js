@@ -17,12 +17,12 @@ let questions = [
         answer: "ans3"
     },
     {
-        question: "Q3: Where in an HTML document is the correct place to refer to an external style sheet?",
-        ans1: "At the end of the document",
-        ans2: "In the head section",
-        ans3: "In the HTML elements",
-        ans4: "In the body section",
-        answer: "ans2"
+        question: "Q3: Choose the correct HTML element to define emphasized text",
+        ans1: "em",
+        ans2: "italic",
+        ans3: "i",
+        ans4: "emphasize",
+        answer: "ans1"
     },
     {
         question: "Q4: What does HTML stand for?",
@@ -68,12 +68,12 @@ let questions = [
         ans4: "{body;color:black;}",
         answer: "ans2"
     },{
-        question: "Q10: which HTML is used to connect JavaScript with HTML?",
-        ans1: "script",
-        ans2: "link",
-        ans3: "relate",
-        ans4: "attach",
-        answer: "ans1"
+        question: "Q10: Which character is used to indicate an end tag?",
+        ans1: "<",
+        ans2: "*",
+        ans3: "/",
+        ans4: ">",
+        answer: "ans3"
     },
 ];
 
