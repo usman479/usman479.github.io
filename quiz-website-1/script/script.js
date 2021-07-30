@@ -89,7 +89,7 @@ const answer4 = document.getElementById("rad4");
 const previous = document.getElementsByClassName("hide")[0];
 
 function start() {
-    previous.setAttribute("class", "")
+    // previous.setAttribute("class", "")
     question.innerHTML = questions[questionsCount].question;
     answer1.innerHTML = questions[questionsCount].ans1;
     answer2.innerHTML = questions[questionsCount].ans2;
