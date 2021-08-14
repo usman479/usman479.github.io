@@ -1,0 +1,214 @@
+* {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 3px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+h2 {
+    font-size: 2.5vw;
+}
+
+#main {
+    background-color: rgb(128, 236, 250);
+    height: 180px;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    flex-direction: column;
+}
+
+#secondary {
+    width: 60%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#inpval {
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 25%;
+    font-size: 1.7vw;
+    margin: 0 0;
+  background: transparent;
+  border-bottom: 1px solid black;
+  transition: width 0.5s;
+}
+
+#inpval:focus {
+    width: 50%;
+}
+
+#add{
+    border: none;
+    outline: none;
+    width: 10%;
+    padding: 5px;
+    font-size: 1.7vw;
+    cursor: pointer;
+    margin: 0;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+#add:hover {
+background-color: rgb(0, 156, 65);
+color: white;
+}
+
+#del-all {
+    border: none;
+    outline: none;
+    width: 20%;
+    padding: 5px;
+    font-size: 1.7vw;
+    cursor: pointer;
+margin: 0;
+transition: background-color 0.5s, color 0.5s;
+}
+
+#del-all:hover  {
+    background-color: rgb(255, 0, 0);
+    color: white;
+}
+
+
+
+#content {
+    margin: 0;
+    width: 100%;
+}
+
+#list {
+    list-style: none;
+    font-size: 2.5vw;
+    margin: 0;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#list li {
+    background-color: rgb(252, 242, 184);   
+    list-style-type: none;
+        list-style-position:inside;
+        margin:0 0 5px 0;
+        padding:0;
+        cursor: pointer;
+        transition: background-color 0.5s;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+        
+        
+}
+
+
+#list li:hover {
+    background-color: rgb(255, 237, 133); 
+}
+
+.del-btn {
+    border: none;
+    outline: none;
+    width: 30%;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s, color 0.5s;
+    height: 100%;
+    font-size: 2vw;
+}
+
+.del-btn:hover {
+    background-color: rgb(255, 0, 0);
+    color: white;
+}
+
+.done-btn {
+    border: none;
+    outline: none;
+    width: 40%;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.5s, color 0.5s;
+    height: 100%;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+}
+
+.done-btn:hover {
+    background-color: rgb(0, 156, 65);
+    color: white;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    width: 20%;
+    height: 60px;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.hide {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    #main {
+        height: 100px;
+        
+    }
+    #del-all {
+        width: 25%;
+        
+    }
+    #list li {
+            height: 40px;      
+    }
+    .done-btn {
+        height: 100%;
+        width: 60%;
+        
+        
+    }
+    .buttons {
+        height: 40px;
+    }
+  }
+
+@media screen and (max-width: 400px) {
+    #main {
+        height: 60px;
+        
+    }
+    /* .buttons {
+height: 30px;
+    }
+    .done-btn {
+        height: 100%;
+        width: 80%;
+        
+        
+    } */
+    #del-all {
+        width: 35%;
+        
+    }
+  }
