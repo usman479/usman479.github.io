@@ -191,6 +191,9 @@ transition: background-color 0.5s, color 0.5s;
     .buttons {
         height: 40px;
     }
+    h2 {
+        font-size: 3vw !important;
+    }
   }
 
 @media screen and (max-width: 400px) {
@@ -223,5 +226,8 @@ transition: background-color 0.5s, color 0.5s;
     }
     #add{
         width: 20%;
+    }
+    h2 {
+        font-size: 4vw !important;
     }
   }
