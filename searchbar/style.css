@@ -1,0 +1,20 @@
+#myinp {
+    width: 20%;
+}
+
+.btn-dark {
+    border-radius: 0;
+}
+
+
+@media screen and (max-width: 600px) {
+    #myinp {
+        width: 40%;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    #myinp {
+        width: 60%;
+    }
+  }
