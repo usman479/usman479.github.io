@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#33D7FF">
+    <link rel="shortcut icon" href="./avatar.jpg" type="image/x-icon">
+    <title>Your Avatar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Get Your Avatar</h1>
+    <div class="main">
+        <div class="first">
+            <label for="inpVal" class="text">Enter Your Name</label>
+            <input type="text" name="" id="inpVal">
+            <p class="text">Select your gender</p>
+            <div class="gender">
+                <div> <input type="radio" name="gender" id="male" value="male" class="gender"><label for="male">Male</label></div>
+                <div><input type="radio" name="gender" id="female" value="female" class="gender"><label for="female">Female</label></div>
+            </div>
+
+        </div>
+        <div class="second">
+            <p class="text">Your Avatar
+            </p>
+            <img src="./cow.jpg" alt="cow" id="image">
+            <button id="btn" onclick="change();">Click Me</button>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
