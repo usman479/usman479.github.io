@@ -1,0 +1,28 @@
+body {
+    background-color: rgb(236, 236, 236);
+}
+#main {
+    margin-top: 50px;
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.log-in-box {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#main-heading {
+   /* font-size: 6vw; */
+   /* color: rgb(19, 94, 145); */
+   font-family: 'Hammersmith One', sans-serif;
+}
+
+.red {
+    color: red;
+}
