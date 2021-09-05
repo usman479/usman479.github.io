@@ -1,11 +1,11 @@
 class Users {
-    constructor(name, email, password) {
+    constructor(name, email, password, teams) {
         this.name = name;
         this.email = email;
         this.password = password;
+        this.teams = [];
     }
 }
-
 
 const signUp = () => {
     let flag = true;
@@ -51,8 +51,6 @@ const signUp = () => {
 
 }
 
-
-
 const logIn = () => {
     const userEmail = document.getElementById("email");
     const userPassword = document.getElementById("password");
@@ -68,12 +66,14 @@ const logIn = () => {
             data = JSON.parse(localStorage.getItem(localStorage.key(i)));
             flag = false;
             if (userPassword.value === data.password) {
+                localStorage.setItem("currentUser", userEmail.value);
                 location.href = "./home.html"
                 flag2 = false;
+                // show();
+
                 break;
             }
         }
-
     }
     if (flag) {
         emailLogin.innerText = "*Email does not exist"
@@ -85,3 +85,87 @@ const logIn = () => {
     }
 
 }
+
+
+
+const createTeam = () => {
+    const teamName = document.getElementById("teamname");
+    const category = document.getElementById("category");
+    const members = document.getElementById("members");
+    const error = document.getElementById("listofmembers")
+    if (members.value !== "" && teamName.value !== "" && category.value !== "") {
+        let getData = JSON.parse(localStorage.getItem(localStorage.getItem("currentUser")))
+        getData.teams.push({
+            admin: localStorage.getItem("currentUser"),
+            name: teamName.value,
+            category: category.value,
+            members: [members.value]
+        })
+
+        if (JSON.parse(localStorage.getItem(members.value))) {
+            localStorage.setItem(localStorage.getItem("currentUser"), JSON.stringify(getData));
+            let mem = JSON.parse(localStorage.getItem(members.value));
+            mem.teams.push({
+                admin: localStorage.getItem("currentUser"),
+                name: teamName.value,
+                category: category.value,
+                members: [members.value]
+            })
+            localStorage.setItem(members.value, JSON.stringify(mem))
+            window.location.reload();
+        } else {
+            alert("member not exists")
+        }
+
+    } else {
+
+        error.innerHTML = "*Please fill out all fields"
+    }
+
+}
+
+
+// function show  () {
+//     const teamsOwn = document.getElementById("teamsown");
+//     const teamsPart = document.getElementById("teamspart");
+//     let currentUser = localStorage.getItem("currentUser");
+//     let getData = JSON.parse(localStorage.getItem(currentUser));
+//     console.log(getData);
+//     console.log(getData.teams.length);
+//     console.log(getData.teams[0].admin)
+//     for (let i = 0; i < getData.teams.length; i++) {
+//         if (currentUser === getData.teams[i].admin) {
+//             teamsOwn.innerHTML += `<div class="container border border-1 border-dark my-5">
+// <div class="row p-4">
+//     <div class="col-12">
+//         <p class="h2">${getData.teams[i].name}</p>
+//     </div>
+//     <div class="col-12">
+//         <p><span class="fw-bold">Members: </span>${getData.teams[i].members[0]}</p>
+//     </div>
+// </div>
+
+// </div>`
+//         } else {
+//             teamsPart.innerHTML += `<div class="container border border-1 border-dark my-5">
+//             <div class="row p-4">
+//                 <div class="col-12">
+//                     <p class="h2">${getData.teams[i].name}</p>
+//                 </div>
+//                 <div class="col-12">
+//                     <p><span class="fw-bold">Members: </span>${getData.teams[i].members[0]}</p>
+//                 </div>
+//             </div>
+
+//             </div>`
+//         }
+//     }
+
+
+// }
+
+// const add = () => {
+//    let currentUser = localStorage.getItem("currentUser");
+//   let getData =  JSON.parse(localStorage.getItem(currentUser));
+//    getData.teams
+// }
