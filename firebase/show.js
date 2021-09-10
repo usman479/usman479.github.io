@@ -60,6 +60,7 @@ const delGroup = (e) => {
     databaseRef.on("child_added", (snapshot) => {
         if (snapshot.val().teamName === e.getAttribute("id")) {
            database.ref("teams/" + snapshot.key).remove();
+           location.reload()
         }
 
     })
