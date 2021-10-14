@@ -31,3 +31,15 @@
     position: fixed;
     
 }
+
+.input-borders {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    
+}
+
+.input-borders:focus {
+    content: none;
+}

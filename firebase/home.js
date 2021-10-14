@@ -24,6 +24,7 @@ const logOut = () => {
 
 }
 
+
 auth.onAuthStateChanged((user) => {
     if (user) {
         showData()
@@ -50,7 +51,8 @@ const showData = () => {
     let databaseRef = database.ref("teams");
     databaseRef.on("child_added", (snapshot) => {
         let data = snapshot.val();
-        showGroups(data)
+        // console.log(snapshot.key);
+        showGroups(data, snapshot)
     })
 }
 
@@ -59,19 +61,30 @@ const delGroup = (e) => {
     let databaseRef = database.ref("teams");
     databaseRef.on("child_added", (snapshot) => {
         if (snapshot.val().teamName === e.getAttribute("id")) {
-           database.ref("teams/" + snapshot.key).remove();
-           location.reload()
+            database.ref("teams/" + snapshot.key).remove();
+            location.reload()
         }
 
     })
-    
+
 }
 // delGroup()
 
-const showGroups = (data) => {
+const reviewPage = (key) => {
+    localStorage.setItem("key", key);
+    location.href = "./review.html"
+}
+
+const memberPage = (key) => {
+    localStorage.setItem("key", key);
+    location.href = "./member.html"
+}
+
+const showGroups = (data, snap) => {
     let teamsOwn = document.getElementById("teamsown");
     let teamsPart = document.getElementById("teamspart");
     if (auth.currentUser.email === data.admin) {
+        console.log(data);
         teamsOwn.innerHTML += `<div class="container border border-1 border-dark my-5 position-relative">
         <div class="position-absolute top-0 end-0">
             <div class="btn-group">
@@ -85,9 +98,11 @@ const showGroups = (data) => {
             </div>
         </div>
         <div class="row p-4">
-            <div class="col-12">
+            <div class="col-9">
                 <p class="h1">${data.teamName}</p>
+                
             </div>
+            <div class="col-3"><button type="button" class="btn btn-outline-info btn-lg rounded-0" data=${snap.key} onclick="reviewPage('${snap.key}')">Review</button></div>
             <div class="col-12">
                 <p><span class="fw-bold">Category: </span>${data.category}</p>
             </div>
@@ -100,9 +115,10 @@ const showGroups = (data) => {
     } else if (auth.currentUser.email === data.members) {
         teamsPart.innerHTML += `<div class="container border border-1 border-dark my-5 position-relative">
         <div class="row p-4">
-            <div class="col-12">
+            <div class="col-9">
                 <p class="h1">${data.teamName}</p>
             </div>
+            <div class="col-3"><button type="button" class="btn btn-outline-info btn-lg rounded-0" data=${snap.key} onclick="memberPage('${snap.key}')">Review</button></div>
             <div class="col-12">
                 <p><span class="fw-bold">Category: </span>${data.category}</p>
             </div>
