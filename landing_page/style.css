@@ -34,3 +34,27 @@
 .background-green {
     background-color: rgb(10, 180, 138);
 }
+
+a{
+    font-size: 2rem;
+}
+
+/* unvisited link */
+a:link {
+    color: white;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: white;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: white;
+  }
+  
+  /* selected link */
+  a:active {
+    color: white;
+  }
