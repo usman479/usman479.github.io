@@ -1,0 +1,36 @@
+* {
+    font-family: sans-serif;
+    margin: 0 !important;
+    padding: 0 !important;
+}       
+
+.bg-overlay {
+    width: 100%;
+}
+
+.background-container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 18%;
+    width: 65%;
+    height: auto;
+}
+
+.hero-badge {
+    position: absolute;
+    top: 18%;
+    left: 83%;
+    z-index: 4;
+    width: 14%;
+    height: auto;
+}
+
+.background-green {
+    background-color: rgb(10, 180, 138);
+}
