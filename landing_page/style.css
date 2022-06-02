@@ -58,3 +58,23 @@ a:link {
   a:active {
     color: white;
   }
+
+  .border-button {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    /* border-top-left-radius: 10px;
+    border-top-right-radius: 10px; */
+  }
+
+.testimonial-border{
+    border: 5px solid green;
+    min-height: 200px;
+    max-height: 300px;
+    border-radius: 20px !important;
+}
+
+.headshot {
+    width: 20%;
+    height: auto;
+    border-radius: 50%;
+}
