@@ -80,7 +80,7 @@ a:link {
 }
 
 .bg-black {
-    background-color: black;
+    background-color: black !important;
 }
 
 .border-none {
