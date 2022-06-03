@@ -1,7 +1,15 @@
+/* @font-face{
+    font-family: 'Warownia Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Warownia Regular'), url('./fonts/warownia/Warownia.woff') format('woff');
+} */
+
 * {
     font-family: sans-serif;
     margin: 0 !important;
     padding: 0 !important;
+    
 }       
 
 .bg-overlay {
@@ -32,7 +40,7 @@
 }
 
 .background-green {
-    background-color: rgb(10, 180, 138);
+    background-color: #0C9077;
 }
 
 a{
@@ -67,7 +75,7 @@ a:link {
   }
 
 .testimonial-border{
-    border: 5px solid green;
+    border: 5px solid #0C9077;
     min-height: 200px;
     max-height: 300px;
     border-radius: 20px !important;
@@ -90,16 +98,18 @@ a:link {
 
 .location-border-1{
     min-height: 400px;
+    /* max-height: 300px; */
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    border: 5px solid green;
+    border: 5px solid #0C9077;
 }
 
 .location-border-2{
     min-height: 400px;
+    /* max-height: 300px; */
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    border: 5px solid green;
+    border: 5px solid #0C9077;
 }
 
 .gradient-text{
