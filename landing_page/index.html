@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DO IT!</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="slider.css">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -17,14 +18,14 @@
     <div class="container-fluid bg-dark">
       <div class="row p-2 justify-content-center justify-content-sm-between">
         <div
-          class="col-8 col-sm-6 col-lg-4 my-0 my-sm-3 d-flex justify-content-center"
+          class="col-7  my-0 my-sm-3 d-flex "
         >
-          <img src="./sources/logo.svg" alt="" />
+          <img src="./sources/logo.svg" alt="" class="logo-width"/>
         </div>
         <div
-          class="col-12 col-sm-4 col-lg-3 text-light d-flex justify-content-center"
+          class="col-4   text-light d-flex justify-content-center"
         >
-          <h1>LOGOS</h1>
+          <h1 class="nav-socials">LOGOS</h1>
         </div>
       </div>
     </div>
@@ -40,14 +41,14 @@
       </div>
       <div class="row gx-5">
         <div
-          class="col-12 col-sm-6 d-flex justify-content-center text-white background-green"
+          class="col-6 d-flex justify-content-center text-white background-green"
         >
-          <a href="#">BUY COMBO</a>
+          <a href="#" class="link-text">BUY COMBO</a>
         </div>
         <div
-          class="col-12 col-sm-6 d-flex justify-content-center text-white background-green"
+          class="col-6 d-flex justify-content-center text-white background-green"
         >
-          <a href="#">BUY 1 COURSE</a>
+          <a href="#" class="link-text">BUY 1 COURSE</a>
         </div>
       </div>
       <div class="row">
@@ -77,14 +78,14 @@
       </div>
       <div class="row gx-5">
         <div
-          class="col-12 col-sm-6 d-flex justify-content-center text-white background-green"
+          class="col-6 d-flex justify-content-center text-white background-green"
         >
-          <a href="#">BUY COMBO</a>
+          <a href="#" class="link-text">BUY COMBO</a>
         </div>
         <div
-          class="col-12 col-sm-6 d-flex justify-content-center text-white background-green"
+          class="col-6 d-flex justify-content-center text-white background-green"
         >
-          <a href="#">BUY 1 COURSE</a>
+          <a href="#" class="link-text">BUY 1 COURSE</a>
         </div>
       </div>
       <div class="row my-3">
@@ -92,15 +93,56 @@
           <h1 class="gradient-text">TESTIMONIALS</h1>
         </div>
       </div>
-      <div class="row justify-content-around">
+    </div>
+      <!-- SLIDER-START -->
+        <div class="container-fluid my-3">
+          <div class="row">
+          <input type="radio" name="slider" id="item-1" >
+          <input type="radio" name="slider" id="item-2" checked>
+          <input type="radio" name="slider" id="item-3">
+          <div class="cards" style="display:flex;justify-content: center;">
+              <label class="card" for="item-1" id="song-1" style="width: 200px;">
+                  <div class="testimonial-border position-relative" >
+                    <img
+                      src="./sources/Mannar-png.png"
+                      alt=""
+                      class="headshot position-absolute bottom-0 end-0"
+                    />
+                  </div>
+              </label>
+              <label class="card" for="item-2" id="song-2" style="width: 200px;">
+                <div class="testimonial-border position-relative">
+                  <img
+                    src="./sources/murtaza png.png"
+                    alt=""
+                    class="headshot position-absolute bottom-0 end-0"
+                  />
+                </div>
+              </label>
+              <label class="card" for="item-3" id="song-3" style="width: 200px;">
+                <div class="testimonial-border position-relative">
+                  <img
+                    src="./sources/Munaf png.png"
+                    alt=""
+                    class="headshot position-absolute bottom-0 end-0"
+                  />
+                </div>
+              </label>
+          </div>
+        </div>
+        </div>
+      <!-- SLIDER-END -->
+      <div>
+      <!-- <div class="row justify-content-around">
+        
         <div class="col-10 my-2 col-sm-3 testimonial-border position-relative">
-          <!-- <div> -->
+          
           <img
             src="./sources/Mannar-png.png"
             alt=""
             class="headshot position-absolute bottom-0 end-0"
           />
-          <!-- </div> -->
+          
         </div>
         <div class="col-10 my-2 col-sm-3 testimonial-border position-relative">
           <img
@@ -116,21 +158,47 @@
             class="headshot position-absolute bottom-0 end-0"
           />
         </div>
-      </div>
-      <div class="row bg-black justify-content-center">
+      </div> -->
+      <div class="row bg-black justify-content-between">
         <div
-          class="col-8 col-sm-12 d-flex justify-content-center gradient-text"
+          class="col-12 d-flex justify-content-center gradient-text"
         >
           FEATURES
         </div>
-        <div class="col-12 my-3">
-          <img src="./sources//Feature 1.jpg" alt="" class="w-75" />
+        <div class="col-6 my-4">
+          <img src="./sources//plan_q.jpg" alt="" class="w-100" />
         </div>
-        <div class="col-12 my-3 d-flex justify-content-end">
-          <img src="./sources/feature 2.jpg" alt="" class="w-75" />
+        <div class="col-6 my-4 text-white px-4">
+          <div class="col-12 plan-heading">Learning<br> Environment</div>
+          <div class="col-12 plan-highlighted">"We believe in practice"</div>
+          <div class="col-12 plan-para">To ensure the courses we are providing are
+             of high quality we use modern day technologies to meet the
+             student's requirement. At IQSF we provide weekly planners,
+             practice tests,mocks,notes and lots of practicing material
+             because we believe in practice based learning.
+            </div>
         </div>
-        <div class="col-12 my-3">
-          <img src="./sources/Feature 3.jpg" alt="" class="w-75" />
+        <div class="col-6 my-4 text-white px-4">
+          <div class="col-12 plan-heading">PLAN I <button class="watch-video">Watch video</button> </div>
+          <div class="col-12 plan-highlighted">"Study with the faculty"</div>
+          <div class="col-12 plan-para">Plan I is a Hybrid modal where
+            students can attend classes at campus or Live
+            from home. In this plan student can stay tuned
+            with the teacher plus having all the benefits
+            of PLAN Q.
+          </div>
+        </div>
+        <div class="col-6 my-4 my-3 d-flex justify-content-end">
+          <img src="./sources/plan_i.jpg" alt="" class="w-100" />
+        </div>
+        <div class="col-6 my-4 my-3">
+          <img src="./sources/plan_q.jpg" alt="" class="w-100" />
+        </div>
+        <div class="col-6 my-4 text-white px-4">
+          <div class="col-12 plan-heading ">PLAN Q<button class="watch-video">Watch video</button></div>
+          <div class="col-12 plan-highlighted">"Prepare in advance with 100% course"</div>
+          <div class="col-12 plan-para">Plan Q is "High Quality Lectures".In this plan students will get access to 100% course at first day in a very organised manner plus faculty will conduct regular QnA session once in every week to ensure performance of students and to make sure you students are prepared for the final exams practice tests and Mock tests will be conducted before the course ends.
+            </div>
         </div>
       </div>
 

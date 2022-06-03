@@ -51,7 +51,7 @@ a:link {
   
   /* mouse over link */
   a:hover {
-    color: white;
+    color: rgb(204, 200, 200) !important;
   }
   
   /* selected link */
@@ -121,4 +121,46 @@ a:link {
 
 .pointer {
     cursor: pointer;
+}
+
+.link-text{
+    font-size: 4vw;
+}
+
+.logo-width{
+    width: 60% !important;
+    height: auto;
+}
+
+.nav-socials {
+    font-size: 5vw !important;
+}
+
+.bg-none {
+    background-color: transparent !important;
+    color: #0C9077;
+}
+
+.plan-heading {
+    font-weight: bold;
+    font-size: 4vw;
+}
+
+.plan-highlighted {
+    color: #40B04A;
+    font-weight: bold;
+    font-size: 2.5vw;
+}
+
+.plan-para{
+    font-size: 1.6vw;
+}
+
+.watch-video {
+    color: white;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 50px;
+    font-size: 1vw;
+    width: 20%;
 }
