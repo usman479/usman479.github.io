@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form</title>
+    <link rel="stylesheet" href="form.css">
+  </head>
+  <body>
+    <button id="toggle">slider toggle</button>
+
+    <div class="form-container">
+      <div class="form-slider closed">
+        <div>
+            <div>
+                <input type="text" class="inputText" required/>
+                <span class="floating-label">Your email address</span>
+            </div>
+            <div>
+              <input type="text" class="inputText" required/>
+            <span class="floating-label">HELLO WORLD</span>  
+            </div>
+            
+          </div>
+      </div>
+    </div>
+
+    <script>
+      var slider = document.querySelector(".form-slider");
+
+      toggle.addEventListener("click", toggleSlider, true);
+
+      function toggleSlider() {
+        if (slider.classList.contains("opened")) {
+          slider.classList.remove("opened");
+          slider.classList.add("closed");
+        } else {
+          slider.classList.remove("closed");
+          slider.classList.add("opened");
+        }
+      }
+    </script>
+  </body>
+</html>

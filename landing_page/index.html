@@ -5,16 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DO IT!</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="slider.css">
+    <!-- MATERIAL CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- BOOTSTRAP ICONS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <!-- BOOTSTRAP -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"/>
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"/>
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="slider.css">
+    <!-- FORM CSS -->
+    <link rel="stylesheet" href="/form.css">
   </head>
   <body>
     <div class="container-fluid bg-dark">
@@ -48,14 +53,123 @@
         <div
           class="col-6 d-flex justify-content-center text-white background-green"
         >
-          <a href="#" class="link-text">BUY COMBO</a>
+          <a  class="link-text toggle">BUY COMBO</a>
         </div>
         <div
           class="col-6 d-flex justify-content-center text-white background-green"
         >
-          <a href="#" class="link-text">BUY 1 COURSE</a>
+          <a class="link-text toggle" >BUY 1 COURSE</a>
         </div>
       </div>
+      <!-- FORM -->
+      <div class="form-container">
+        <div class="form-slider closed  dp-none">
+          <form action="" method="POST" name="registration-form">
+          <div class="row justify-content-around">
+            <div class="col-12 registration-text my-3 d-flex justify-content-center">
+              REGISTRATION FORM
+            </div>
+            <div class="col-12">
+              Papers <span class="papers-count">00</span>
+            </div>
+            <div class="row justify-content-around">        
+            <div class="col-3 " >
+                <div class="course-select-boxes" data-bs-toggle="modal" data-bs-target="#courseModal">
+                  <div class="circle-plus d-flex justify-content-center ">
+                    +
+                  </div>
+                </div>
+                <div class="my-5">
+                <select>
+                  <option value="" disabled selected>Attempt</option>
+                  <option value="1">Dec 2022 Plan I</option>
+                  <option value="2">Dec 2022 & June 2023 Plan Q</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="course-select-boxes" data-bs-toggle="modal" data-bs-target="#courseModal">
+                <div class="circle-plus d-flex justify-content-center ">
+                  +
+                </div>
+              </div>
+              <div class="my-5">
+                <select>
+                  <option value="" disabled selected>Attempt</option>
+                  <option value="1">Dec 2022 Plan I</option>
+                  <option value="2">Dec 2022 & June 2023 Plan Q</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-3" >
+              <div class="course-select-boxes" data-bs-toggle="modal" data-bs-target="#courseModal">
+                <div class="circle-plus d-flex justify-content-center ">
+                  +
+                </div>
+              </div>  
+              <div class="my-5">
+                <select>
+                  <option value="" disabled selected>Attempt</option>
+                  <option value="1">Dec 2022 Plan I</option>
+                  <option value="2">Dec 2022 & June 2023 Plan Q</option>
+                </select>
+              </div>
+            </div>
+            </div>
+          </div>
+            <div class="row justify-content-center">
+        
+            <div class="col-5 col-sm-5 input-field mx-3 my-5">
+              <input id="name" type="text" class="validate" name="Name" required>
+              <label for="name">Name</label>
+            </div>
+            <div class="col-5 col-sm-5 input-field mx-3 my-5">
+              <input id="guardian-name" type="text" class="validate" name="Guardian_Name" required>
+              <label for="guardian-name">Father's/Guardian's Name</label>
+            </div>
+            <div class="col-5 col-sm-5 input-field mx-3 my-5">
+              <input id="phone" type="number" class="validate" name="Phone" required>
+              <label for="phone">Phone#</label>
+            </div>
+            <div class="col-5 col-sm-5 input-field mx-3 my-5">
+              <input id="guardian-phone" type="number" class="validate" name="Guardian_Phone"  required>
+              <label for="guardian-phone">Father's/Guardian's Phone#</label>
+            </div>
+            <div class="col-5 col-sm-5 input-field mx-3 my-5">
+              <input id="cnic" type="text" class="validate" name="CNIC"  required>
+              <label for="cnic">CNIC</label>
+            </div>
+            <div class="col-5 col-sm-5 input-field mx-3 my-5">
+              <input id="e-mail" type="email" class="validate" name="Email" required>
+              <label for="e-mail">E-mail</label>
+            </div>
+            <div class="col-5 col-sm-5 input-field mx-3 my-5">
+              <input id="icap" type="text" class="validate" name="ICAP" required>
+              <label for="icap">ICAP</label>
+            </div>
+            <div class="col-5 col-sm-5 input-field mx-3 my-5">
+              <input id="city" type="text" class="validate" name="City" required>
+              <label for="city">CITY</label>
+            </div>
+            <div class="col-5 col-sm-5 input-field mx-3 my-5">
+              <input id="coupon" type="text" class="validate" name="Coupon" required>
+              <label for="coupon">Coupon</label>
+            </div>
+            <div class="col-5 col-sm-5 d-flex">
+              <div class="amount-box-1">PKR&nbsp;</div>
+              <div class="amount-box-2">&nbsp;&nbsp;00</div>
+            </div>
+          
+            <div class="col-5 col-sm-5 mx-5 d-flex justify-content-center">
+              <button class="btn-large waves-effect waves-light submit-button" type="submit" name="action">Submit
+                <!-- <i class="material-icons right">send</i> -->
+              </button>
+            </div>
+        </div>
+          </form>
+        </div>
+      </div>
+      <!-- FORM END -->
       <div class="row">
         <div class="col-6 col-md-4">
           <img src="./sources/CFAP 1.jpg" alt="" class="w-100" />
@@ -100,12 +214,13 @@
       </div>
     </div>
       <!-- SLIDER-START -->
-        <div class="container-fluid my-3">
-          <div class="row">
-          <input type="radio" name="slider" id="item-1" >
-          <input type="radio" name="slider" id="item-2" checked>
-          <input type="radio" name="slider" id="item-3">
-          <div class="cards" style="display:flex;justify-content: center;">
+        <div class="container-fluid my-5">
+          <div class="row justify-content-center">
+            <div class="col-12 justify-content-center ms-5 ms-sm-0">
+            <input type="radio" name="slider" id="item-1" >
+            <input type="radio" name="slider" id="item-2" checked>
+            <input type="radio" name="slider" id="item-3">
+            <div class="cards" style="display:flex;justify-content: center;">
               <label class="card" for="item-1" id="song-1" style="width: 200px;">
                   <div class="testimonial-border position-relative" >
                     <img
@@ -133,11 +248,12 @@
                   />
                 </div>
               </label>
+            </div>
           </div>
         </div>
-        </div>
+      </div>
       <!-- SLIDER-END -->
-      <div>
+      
       <!-- <div class="row justify-content-around">
         
         <div class="col-10 my-2 col-sm-3 testimonial-border position-relative">
@@ -164,6 +280,7 @@
           />
         </div>
       </div> -->
+      <div class="container-fluid my-5 feature-margin">
       <div class="row bg-black justify-content-between">
         <div
           class="col-12 d-flex justify-content-center gradient-text"
@@ -184,7 +301,7 @@
             </div>
         </div>
         <div class="col-6 my-4 text-white px-4">
-          <div class="col-12 plan-heading">PLAN I <button class="watch-video">Watch video</button> </div>
+          <div class="col-12 plan-heading">PLAN I <a class="remove-a" href="" target="_blank"></a><button class="watch-video">Watch video</button></a> </div>
           <div class="col-12 plan-highlighted">"Study with the faculty"</div>
           <div class="col-12 plan-para">Plan I is a Hybrid modal where
             students can attend classes at campus or Live
@@ -200,7 +317,7 @@
           <img src="./sources/plan_q.jpg" alt="" class="w-100" />
         </div>
         <div class="col-6 my-4 text-white px-4">
-          <div class="col-12 plan-heading ">PLAN Q<button class="watch-video">Watch video</button></div>
+          <div class="col-12 plan-heading ">PLAN Q<a class="remove-a" href="https://www.facebook.com/iqsf.pk/videos/plan-q/1399697953805807" target="_blank"><button class="watch-video"> Watch video</button></a></div>
           <div class="col-12 plan-highlighted">"Prepare in advance with 100% course"</div>
           <div class="col-12 plan-para">Plan Q is "High Quality Lectures".In this plan students will get access to 100% course at first day in a very organised manner plus faculty will conduct regular QnA session once in every week to ensure performance of students and to make sure you students are prepared for the final exams practice tests and Mock tests will be conducted before the course ends.
             </div>
@@ -404,10 +521,8 @@
           <div class="col-12 d-flex justify-content-center my-2  my-sm-5"> <i class="bi bi-pin-map-fill location-icon"><span class="location-text"> 187K, P.E.C.H.S Block 2 Karachi</span></i></div>
           <div class="col-12 d-flex justify-content-center"><i class="bi bi-telephone-fill location-icon"><span class="location-text"> +92 232 0230232</span></i></div>
          
-         
-          
         </div>
-        <div class="col-10 col-sm-7 location-border-2">
+        <div class="col-10 col-sm-7 location-border-2 mx-5 mx-sm-2">
           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14480.186442801858!2d67.0588564!3d24.8622576!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3f399dd983a02594!2sIQ%20School%20Of%20Finance%20(CA%20Institute)!5e0!3m2!1sen!2s!4v1654281713404!5m2!1sen!2s" class="embed-map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
@@ -430,30 +545,57 @@
    
 
 
-<!-- Modal -->
-<div class="d-flex justify-content-center">
-<div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Pricing Chart</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <img src="./sources/pricing_chart.jpg" alt="" class="pricing-chart">
+    <!-- Pricing Modal -->
+    <div class="d-flex justify-content-center">
+    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Pricing Chart</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="./sources/fee_structure_1.jpg" alt="" class="pricing-chart">
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-</div>
-
-
+    </div>
     <!-- PRICING END -->
+
+    <!-- COURSES MODAL -->
+      <div class="modal modal-sm-w-100 modal-sm-w-25 fade " id="courseModal" tabindex="-1" aria-labelledby="courseModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="courseModalLabel">Courses</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img src="./sources/course pop up window.jpg" alt="" class="course-chart">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COURSES END -->
+
+
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+      <!-- MATERIAL JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- MY JS -->
+    <script src="app.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('select');
+      M.FormSelect.init(elems);
+  });
+    </script>
   </body>
 </html>
