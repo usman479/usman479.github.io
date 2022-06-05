@@ -254,15 +254,21 @@ a:link {
 .amount-box-1 {
     border: 5px solid #40B04A;
     border-right: 3px solid #40B04A !important;
-    font-size: 3rem;
-    height: 10vh;
+    font-size: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vw;
 }
 
 .amount-box-2{
     border: 5px solid #40B04A;
     border-left: 3px solid #40B04A !important;
-    font-size: 3rem;
-    height: 10vh;
+    font-size: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vw;
 
 }
 
@@ -272,7 +278,7 @@ a:link {
     border: none;
     outline: none;
     /* border-radius: 50%; */
-    width: 20vw;
+    width: 30vw;
     font-weight: bolder;
 }
 
