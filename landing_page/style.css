@@ -226,7 +226,8 @@ a:link {
 .course-select-boxes{
     border: 1px solid #0077B3;
     background-color: rgba(0, 119, 179, 0.1);
-    min-height: 200px;
+    /* min-height: 50vh; */
+    /* max-height: 150px; */
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -281,6 +282,15 @@ a:link {
     width: 30vw;
     font-weight: bolder;
 }
+.upload-button{
+    /* color: white; */
+    /* background-color: #40B04A; */
+    border: none;
+    outline: none;
+    /* border-radius: 50%; */
+    width: 100px;
+    font-weight: bolder;
+}
 
 .attempt-select{
     /* position: relative;
@@ -297,7 +307,20 @@ a:link {
 }
 
 .course-chart{
-    width: 40vw;
+    width: 10vw;
+    cursor: pointer;
+}
+.course-chart-02{
+    width: 10vw;
+    cursor: pointer;
+}
+.course-chart-03{
+    width: 10vw;
+    cursor: pointer;
+}
+
+.course-chart:hover, .course-chart-02:hover, .course-chart-03:hover {
+    box-shadow: 5px 10px 8px 10px #888888;
 }
 
 .dp-none{
@@ -318,4 +341,28 @@ a:link {
     background-color: #0C9077;
     color: white;
     font-size: 5vw;
+}
+
+#papers-count {
+    border: 3px solid black;
+    font-size: 3vw;
+    font-weight: bold;
+    display: inline-block;
+    width: 70px;
+    text-align: center;
+    /* padding: 5px; */
+}
+
+#papers-text{
+    font-size: 3vw;
+    font-weight: bold;
+}
+
+.height100 {
+    width:80%;
+    height: auto;
+}
+
+.name-margin {
+    margin-top:80px !important;
 }
