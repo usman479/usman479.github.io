@@ -364,7 +364,7 @@ a:link {
 }
 
 .name-margin {
-    margin-top:80px !important;
+    margin-top:120px !important;
 }
 
 .green {
@@ -393,3 +393,11 @@ a:link {
 .hidden {
     visibility: hidden !important;
 }
+
+#close01 {
+    color: red;
+    position: relative !important;
+    left: 30% !important;
+    top: 10% !important;
+}
+

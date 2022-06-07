@@ -81,12 +81,13 @@
             <input type="text" class="dp-none" name="Paper_Count">
             <div class="row justify-content-around">        
             <div class="col-3 " >
-                <div class="course-select-boxes h-100 w-50 w-sm-100 ms-5" data-bs-toggle="modal" data-bs-target="#courseModal">
-                  <div class="circle-plus d-flex justify-content-center " id="plus01">
-                    +
-                  </div>
+              <button type="button" class="btn btn-outline-danger ms-5" id="close01" disabled onclick="removeCourse01(this)">Remove</button>
+              <div class="course-select-boxes h-100 w-50 w-sm-100 ms-5" data-bs-toggle="modal" data-bs-target="#courseModal">
+                <div class="circle-plus d-flex justify-content-center " id="plus01">
+                  +
                 </div>
-                <div class="my-5 hidden" id="Attempt">
+              </div>
+              <div class="my-5 hidden" id="Attempt">
                 <select name="Attempt" class="papers hidden"   >
                   <option value="" disabled selected >Attempt</option>
                   <option value="Dec 2022 Plan I" id="attempt1" >Dec 2022 Plan I</option>
@@ -95,6 +96,7 @@
               </div>
             </div>
             <div class="col-3">
+              <button type="button" class="btn btn-outline-danger ms-5" id="close02" onclick="removeCourse02(this)" disabled>Remove</button>
               <div class="course-select-boxes h-100 w-50 w-sm-100 ms-5" data-bs-toggle="modal" data-bs-target="#courseModal02">
                 <div class="circle-plus d-flex justify-content-center " id="plus02">
                   +
@@ -109,6 +111,7 @@
               </div>
             </div>
             <div class="col-3" >
+              <button type="button" class="btn btn-outline-danger ms-5" id="close03" onclick="removeCourse03(this)" disabled>Remove</button>
               <div class="course-select-boxes h-100 w-50 w-sm-100 ms-5" data-bs-toggle="modal" data-bs-target="#courseModal03">
                 <div class="circle-plus d-flex justify-content-center " id="plus03">
                   +
@@ -179,9 +182,9 @@
                 </datalist>
             </div>
 
-            <div class="col-5 col-sm-5 input-field mx-3 my-3 dp-none" id="area-input">
+            <div class="col-5 col-sm-5 input-field mx-3 my-3 " id="area-input">
               <label>Area/Locality
-              <input list="Areas" name="Area/Locality" class="validate" /></label>
+              <input list="Areas" name="Area/Locality" class="validate" disabled/></label>
                 <datalist id="Areas">
                   <option value="Gulshan e Iqbal">
                   <option value="Gulistan e Jauhar">
@@ -638,23 +641,23 @@
             </div>
             <div class="modal-body">
               <div class="row">
-                <div class="col-12 col-sm-6 d-flex justify-content-center">
-                  <img src="./sources/CFAP 1.jpg" alt="" class="course-chart" value="CFAP 1: AAFR">
+                <div class="col-12 col-sm-6 d-flex justify-content-center" >
+                  <img src="./sources/CFAP 1.jpg" alt="" class="course-chart"  value="CFAP 1: AAFR" onclick="counter01(this)">
                 </div>
-                <div class="col-12 col-sm-6 d-flex justify-content-center">
-                  <img src="./sources/CFAP 2.jpg" alt="" class="course-chart" value="CFAP 2: ACLP">
+                <div class="col-12 col-sm-6 d-flex justify-content-center" >
+                  <img src="./sources/CFAP 2.jpg" alt="" class="course-chart"  value="CFAP 2: ACLP" onclick="counter01(this)">
                 </div>
-                <div class="col-12 col-sm-6 d-flex justify-content-center">
-                  <img src="./sources/CFAP 3.jpg" alt="" class="course-chart" value="CFAP 3: SPM">
+                <div class="col-12 col-sm-6 d-flex justify-content-center" >
+                  <img src="./sources/CFAP 3.jpg" alt="" class="course-chart"  value="CFAP 3: SPM" onclick="counter01(this)">
                 </div>
-                <div class="col-12 col-sm-6 d-flex justify-content-center">
-                  <img src="./sources/CFAP 4.jpg" alt="" class="course-chart" value="CFAP 4: BFD">
+                <div class="col-12 col-sm-6 d-flex justify-content-center" >
+                  <img src="./sources/CFAP 4.jpg" alt="" class="course-chart"  value="CFAP 4: BFD" onclick="counter01(this)">
                 </div>
-                <div class="col-12 col-sm-6 d-flex justify-content-center">
-                  <img src="./sources/CFAP 5.jpg" alt="" class="course-chart" value="CFAP 5: TPP">
+                <div class="col-12 col-sm-6 d-flex justify-content-center" >
+                  <img src="./sources/CFAP 5.jpg" alt="" class="course-chart"  value="CFAP 5: TPP" onclick="counter01(this)">
                 </div>
-                <div class="col-12 col-sm-6 d-flex justify-content-center">
-                  <img src="./sources/CFAP 6.jpg" alt="" class="course-chart" value="CFAP 6: AARS">
+                <div class="col-12 col-sm-6 d-flex justify-content-center" >
+                  <img src="./sources/CFAP 6.jpg" alt="" class="course-chart"  value="CFAP 6: AARS" onclick="counter01(this)">
                 </div>
               </div>
             </div>
@@ -675,22 +678,22 @@
             <div class="modal-body">
               <div class="row">
                 <div class="col-12 col-sm-6 d-flex justify-content-center">
-                  <img src="./sources/CFAP 1.jpg" alt="" class="course-chart-02" value="CFAP 1: AAFR">
+                  <img src="./sources/CFAP 1.jpg" alt="" class="course-chart-02" onclick="counter02(this)" value="CFAP 1: AAFR">
                 </div>
                 <div class="col-12 col-sm-6 d-flex justify-content-center">
-                  <img src="./sources/CFAP 2.jpg" alt="" class="course-chart-02" value="CFAP 2: ACLP">
+                  <img src="./sources/CFAP 2.jpg" alt="" class="course-chart-02" onclick="counter02(this)" value="CFAP 2: ACLP">
                 </div>
                 <div class="col-12 col-sm-6 d-flex justify-content-center">
-                  <img src="./sources/CFAP 3.jpg" alt="" class="course-chart-02" value="CFAP 3: SPM">
+                  <img src="./sources/CFAP 3.jpg" alt="" class="course-chart-02" onclick="counter02(this)" value="CFAP 3: SPM">
                 </div>
                 <div class="col-12 col-sm-6 d-flex justify-content-center">
-                  <img src="./sources/CFAP 4.jpg" alt="" class="course-chart-02" value="CFAP 4: BFD">
+                  <img src="./sources/CFAP 4.jpg" alt="" class="course-chart-02" onclick="counter02(this)" value="CFAP 4: BFD">
                 </div>
                 <div class="col-12 col-sm-6 d-flex justify-content-center">
-                  <img src="./sources/CFAP 5.jpg" alt="" class="course-chart-02" value="CFAP 5: TPP">
+                  <img src="./sources/CFAP 5.jpg" alt="" class="course-chart-02" onclick="counter02(this)" value="CFAP 5: TPP">
                 </div>
                 <div class="col-12 col-sm-6 d-flex justify-content-center">
-                  <img src="./sources/CFAP 6.jpg" alt="" class="course-chart-02" value="CFAP 6: AARS">
+                  <img src="./sources/CFAP 6.jpg" alt="" class="course-chart-02" onclick="counter02(this)" value="CFAP 6: AARS">
                 </div>
               </div>
             </div>
@@ -711,22 +714,22 @@
             <div class="modal-body">
               <div class="row">
                 <div class="col-12 col-sm-6 d-flex justify-content-center">
-                  <img src="./sources/CFAP 1.jpg" alt="" class="course-chart-03" value="CFAP 1: AAFR">
+                  <img src="./sources/CFAP 1.jpg" alt="" class="course-chart-03" onclick="counter03(this)" value="CFAP 1: AAFR">
                 </div>
                 <div class="col-12 col-sm-6 d-flex justify-content-center">
-                  <img src="./sources/CFAP 2.jpg" alt="" class="course-chart-03" value="CFAP 2: ACLP">
+                  <img src="./sources/CFAP 2.jpg" alt="" class="course-chart-03" onclick="counter03(this)" value="CFAP 2: ACLP">
                 </div>
                 <div class="col-12 col-sm-6 d-flex justify-content-center">
-                  <img src="./sources/CFAP 3.jpg" alt="" class="course-chart-03" value="CFAP 3: SPM">
+                  <img src="./sources/CFAP 3.jpg" alt="" class="course-chart-03" onclick="counter03(this)" value="CFAP 3: SPM">
                 </div>
                 <div class="col-12 col-sm-6 d-flex justify-content-center">
-                  <img src="./sources/CFAP 4.jpg" alt="" class="course-chart-03" value="CFAP 4: BFD">
+                  <img src="./sources/CFAP 4.jpg" alt="" class="course-chart-03" onclick="counter03(this)" value="CFAP 4: BFD">
                 </div>
                 <div class="col-12 col-sm-6 d-flex justify-content-center">
-                  <img src="./sources/CFAP 5.jpg" alt="" class="course-chart-03" value="CFAP 5: TPP">
+                  <img src="./sources/CFAP 5.jpg" alt="" class="course-chart-03" onclick="counter03(this)" value="CFAP 5: TPP">
                 </div>
                 <div class="col-12 col-sm-6 d-flex justify-content-center">
-                  <img src="./sources/CFAP 6.jpg" alt="" class="course-chart-03" value="CFAP 6: AARS">
+                  <img src="./sources/CFAP 6.jpg" alt="" class="course-chart-03" onclick="counter03(this)" value="CFAP 6: AARS">
                 </div>
               </div>
             </div>
@@ -744,7 +747,8 @@
       <!-- MATERIAL JS -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- MY JS -->
-    <script src="app.js" type="module"></script>
+    <script src="app.js"></script>
+    <script src="firebase.js" type="module"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
       var elems = document.querySelectorAll('select');

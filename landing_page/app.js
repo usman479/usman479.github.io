@@ -4,19 +4,7 @@
 // import { storage } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-storage.js";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyAIU5tdRe4Fvm0_8ktwR6XWe0yBtPADv6g",
-  authDomain: "landing-page-e94ed.firebaseapp.com",
-  projectId: "landing-page-e94ed",
-  storageBucket: "landing-page-e94ed.appspot.com",
-  messagingSenderId: "929767843654",
-  appId: "1:929767843654:web:683ef0d1f6a9e4852de747",
-};
 
-// Initialize Firebase
-// const app = initializeApp(firebaseConfig);
-firebase.initializeApp(firebaseConfig);
 
 function upload() {
   var storageRef = firebase.storage().ref();
@@ -34,9 +22,6 @@ function upload() {
     });
 }
 
-function closeModal(e){
-  
-}
 
 let sindhCities = ["karachi", "hyderabad", "sukkur", "nawabshah", "thatta"];
 let kpkCities = ["abbotabad", "peshawar", "mansehra", "mardan", "kohat"];
@@ -114,6 +99,10 @@ let paper03 = "";
 let flag1 = true;
 let flag2 = true;
 let flag3 = true;
+let removeFlag1 = false;
+let removeFlag2 = false;
+let removeFlag3 = false;
+
 var courseModal01 = new bootstrap.Modal(document.getElementById('courseModal'), {
   keyboard: true
 })
@@ -124,92 +113,129 @@ var courseModal03 = new bootstrap.Modal(document.getElementById('courseModal03')
   keyboard: true
 })
 let countSpan = document.querySelector("#papers-count");
-for(let i=0; i<courseChart.length; i++){
-  courseChart[i].addEventListener("click",(e) => {
+
+
+
+
+let plus01 = document.querySelector("#plus01");
+let plus02 = document.querySelector("#plus02");
+let plus03 = document.querySelector("#plus03");
+let close01 = document.getElementById("close01");
+let close02 = document.getElementById("close02");
+let close03 = document.getElementById("close03");
+let [box01,box02,box03] = document.getElementsByClassName("course-select-boxes");
+function counter01(e) {
+ 
   if(flag1){
-    
   ++count;
   countSpan.innerHTML = "0" + count;
-  attempt.classList.remove("hidden");
-  attemptSelect.setAttribute("required","required");
-  paper01 = e.target.getAttribute("value");
-  priceCalc();
-  courseModal01.toggle();
   flag1 = false;
+  removeFlag1 = true;
   }
-  })
+    attempt.classList.remove("hidden");
+    attemptSelect.setAttribute("required","required");
+    paper01 = e.getAttribute("value");
+    close01.removeAttribute("disabled");
+    plus01.classList.remove("dp-none");
+    
+    addPlusBox01(e);
+    priceCalc();
+    courseModal01.toggle();
 }
-for(let i=0; i<courseChart.length; i++){
-  courseChart2[i].addEventListener("click",(e) => {
-    if(flag2){
-      let countSpan = document.querySelector("#papers-count");
-    ++count;
-    countSpan.innerHTML = "0" + count;
+function counter02(e) {
+ 
+  if(flag2){
+  ++count;
+  countSpan.innerHTML = "0" + count;
+  flag2 = false;
+  removeFlag2 = true;
+  }
     attempt2.classList.remove("hidden");
     attempt2Select.setAttribute("required","required");
-    paper02 = e.target.getAttribute("value");
+    paper02 = e.getAttribute("value");
+    close02.removeAttribute("disabled");
+    plus02.classList.remove("dp-none");
+    addPlusBox02(e);
     priceCalc();
     courseModal02.toggle();
-    flag2 = false;
-    }
-  })
 }
-for(let i=0; i<courseChart.length; i++){
-  courseChart3[i].addEventListener("click",(e) => {
-    if(flag3){
-      let countSpan = document.querySelector("#papers-count");
-    ++count;
-    countSpan.innerHTML = "0" + count;
+function counter03(e) {
+ 
+  if(flag3){
+  ++count;
+  countSpan.innerHTML = "0" + count;
+  flag3 = false;
+  removeFlag3 = true;
+  }
     attempt3.classList.remove("hidden");
     attempt3Select.setAttribute("required","required");
-    paper03 = e.target.getAttribute("value");
+    paper03 = e.getAttribute("value");
+    close03.removeAttribute("disabled");
+    plus03.classList.remove("dp-none");
+    addPlusBox03(e);
     priceCalc();
     courseModal03.toggle();
-    flag3 = false;
-    }
-  })
 }
 
+// let close01 = document.getElementById("close01");
+// let close02 = document.getElementById("close02");
+// let close03 = document.getElementById("close03");
 
-// function counter1 (e) {
-//   console.log(e.target);
-//   if(flag1){
-//     let countSpan = document.querySelector("#papers-count");
-//   ++count;
-//   countSpan.innerHTML = "0" + count;
-//   attempt.classList.remove("hidden");
-//   attemptSelect.setAttribute("required","required");
-//   priceCalc();
-//   flag1 = false;
-//   }
-// }
-// function counter2 () {
-//   if(flag2){
-//     let countSpan = document.querySelector("#papers-count");
-//   ++count;
-//   countSpan.innerHTML = "0" + count;
-//   attempt2.classList.remove("hidden");
-//   attempt2Select.setAttribute("required","required");
-//   paper02 = e.target.getAttribute("value");
-//   priceCalc();
-//   flag2 = false;
-//   }
-// }
-// function counter3 () {
-//   if(flag3){
-//     let countSpan = document.querySelector("#papers-count");
-//   ++count;
-//   countSpan.innerHTML = "0" + count;
-//   attempt3.classList.remove("hidden");
-//   attempt3Select.setAttribute("required","required");
-//   paper03 = e.target.getAttribute("value");
-//   priceCalc();
-//   flag3 = false;
-//   }
-// }
+function removeCourse01 (e) {
+        if(removeFlag1){
+          --count;
+          countSpan.innerHTML = "0" + count;
+          flag1 = true;
+          removeFlag1 = false;
+        }
+        attempt.classList.add("hidden");
+        attemptSelect.removeAttribute("required");
+        close01.setAttribute("disabled","disabled");
+        paper01 = "";
+        plus01.classList.add("dp-none");
+        box01.innerHTML = `<div class="circle-plus d-flex justify-content-center " id="plus01">
+        +
+      </div>`
+        priceCalc();
+        delPlusBox01(e);
 
-
-
+}
+function removeCourse02 (e) {
+        if(removeFlag2){
+          --count;
+          countSpan.innerHTML = "0" + count;
+          flag2 = true;
+          removeFlag2 = false;
+        }
+        attempt2.classList.add("hidden");
+        attempt2Select.removeAttribute("required");
+        close02.setAttribute("disabled","disabled");
+        paper02 = "";
+        plus02.classList.add("dp-none");
+        box02.innerHTML = `<div class="circle-plus d-flex justify-content-center " id="plus02">
+        +
+      </div>`
+        priceCalc();
+        delPlusBox02(e);
+}
+function removeCourse03 (e) {
+        if(removeFlag3){
+          --count;
+          countSpan.innerHTML = "0" + count;
+          flag3 = true;
+          removeFlag3 = false;
+        }
+        attempt.classList.add("hidden");
+        attemptSelect.removeAttribute("required");
+        close03.setAttribute("disabled","disabled");
+        paper03 = "";
+        plus03.classList.add("dp-none");
+        box03.innerHTML = `<div class="circle-plus d-flex justify-content-center " id="plus03">
+        +
+      </div>`
+        priceCalc();
+        delPlusBox01(e);
+}
 
 let amountBox = document.querySelectorAll(".amount-box-2")[0];
 function priceCalc () {
@@ -219,6 +245,8 @@ function priceCalc () {
     amountBox.innerHTML = "&nbsp;&nbsp;40,000"
   } else if(count === 3){
     amountBox.innerHTML = "&nbsp;&nbsp;50,000"
+  } else if(count === 0) {
+    amountBox.innerHTML = "&nbsp;&nbsp;00"
   }
 }
 
@@ -282,11 +310,13 @@ let areaInputBox = document.getElementsByName("Area/Locality")[0];
 
 cityInput.addEventListener("keyup", (e) => {
   if(e.target.value.toLowerCase() === "karachi") {
-    areaInput.classList.remove("dp-none")
+    // areaInput.classList.remove("dp-none")
     areaInputBox.setAttribute("required","required");
+    areaInputBox.removeAttribute("disabled");
   }else if(e.target.classList.contains("dp-none") === false){
-    areaInput.classList.add("dp-none")
+    // areaInput.classList.add("dp-none")
     areaInputBox.removeAttribute("required");
+    areaInputBox.setAttribute("disabled","disabled")
   }
 })
 
@@ -298,6 +328,7 @@ cities.addEventListener("change", () => {
     for (let i = 0; i < karachiAreas.length; i++) {
       areas.innerHTML += `<option value=${areas[i]}>`;
     }
+
   }
 });
 
@@ -498,41 +529,55 @@ form.addEventListener("submit", (e) => {
 
 
 function addPlusBox01 (e) {
-    let plus01 = document.querySelector("#plus01");
     let boxes = document.querySelectorAll(".course-select-boxes")[0];
     plus01.classList.add("dp-none");
-    boxes.innerHTML = `<img src="${e.target.getAttribute('src')}" class="height100">`
-    console.log(e.target.getAttribute("src"));
-
+    boxes.innerHTML = `<img src="${e.getAttribute('src')}" class="height100">`;
+    paper01 = e.getAttribute("src"); 
 }
 function addPlusBox02 (e) {
-    let plus02 = document.querySelector("#plus02");
     let boxes = document.querySelectorAll(".course-select-boxes")[1];
     plus02.classList.add("dp-none");
-    boxes.innerHTML = `<img src="${e.target.getAttribute('src')}" class="height100">`
-    console.log(e.target.getAttribute("src"));
-
-}
+    boxes.innerHTML = `<img src="${e.getAttribute('src')}" class="height100">`;
+    paper02 = e.getAttribute("src");
+    
+  }
 function addPlusBox03 (e) {
-    let plus03 = document.querySelector("#plus03");
     let boxes = document.querySelectorAll(".course-select-boxes")[2];
     plus03.classList.add("dp-none");
-    boxes.innerHTML = `<img src="${e.target.getAttribute('src')}" class="height100">`
-    console.log(e.target.getAttribute("src"));
+    boxes.innerHTML = `<img src="${e.getAttribute('src')}" class="height100">`;
+    paper03 = e.getAttribute("src");
+}
 
+function delPlusBox01(e){
+  let boxes = document.querySelectorAll(".course-select-boxes")[0];
+  plus01.classList.remove("dp-none");
+  boxes.innerHTML = "";
+  paper01 = "";
+}
+function delPlusBox02(e){
+  let boxes = document.querySelectorAll(".course-select-boxes")[1];
+  plus02.classList.remove("dp-none");
+  boxes.innerHTML = "";
+  paper02 = "";
+}
+function delPlusBox02(e){
+  let boxes = document.querySelectorAll(".course-select-boxes")[2];
+  plus03.classList.remove("dp-none");
+  boxes.innerHTML = "";
+  paper03 = "";
 }
 
 let coursesChart = document.querySelectorAll(".course-chart");
 let coursesChart02 = document.querySelectorAll(".course-chart-02");
 let coursesChart03 = document.querySelectorAll(".course-chart-03");
 
-for(let i=0; i<coursesChart.length; i++) {
-    coursesChart[i].addEventListener("click", addPlusBox01)
-}
-for(let i=0; i<coursesChart.length; i++) {
-    coursesChart02[i].addEventListener("click", addPlusBox02)
-}
-for(let i=0; i<coursesChart.length; i++) {
-    coursesChart03[i].addEventListener("click", addPlusBox03)
-}
+// for(let i=0; i<coursesChart.length; i++) {
+//     coursesChart[i].addEventListener("click", addPlusBox01)
+// }
+// for(let i=0; i<coursesChart.length; i++) {
+//     coursesChart02[i].addEventListener("click", addPlusBox02)
+// }
+// for(let i=0; i<coursesChart.length; i++) {
+//     coursesChart03[i].addEventListener("click", addPlusBox03)
+// }
 
