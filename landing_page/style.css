@@ -366,3 +366,30 @@ a:link {
 .name-margin {
     margin-top:80px !important;
 }
+
+.green {
+    color: green;
+}
+
+/* LOADER */
+
+.loader {
+    border: 16px solid #f3f3f3 !important; /* Light grey */
+    border-top: 16px solid #3498db !important; /* Blue */
+    border-radius: 50% !important;
+    width: 120px !important;
+    height: 120px !important;
+    animation: spin 2s linear infinite !important;
+    position: fixed !important;
+    left: 40% !important;
+    top: 80% !important;
+    }
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+.hidden {
+    visibility: hidden !important;
+}

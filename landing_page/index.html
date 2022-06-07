@@ -86,8 +86,8 @@
                     +
                   </div>
                 </div>
-                <div class="my-5">
-                <select name="Attempt" class="papers">
+                <div class="my-5 hidden" id="Attempt">
+                <select name="Attempt" class="papers hidden"   >
                   <option value="" disabled selected >Attempt</option>
                   <option value="Dec 2022 Plan I" id="attempt1" >Dec 2022 Plan I</option>
                   <option value="Dec 2022 & June 2023 Plan Q">Dec 2022 & June 2023 Plan Q</option>
@@ -100,8 +100,8 @@
                   +
                 </div>
               </div>
-              <div class="my-5">
-                <select name="Attempt02" class="papers">
+              <div class="my-5 hidden" id="Attempt02">
+                <select name="Attempt02" class="papers"  >
                   <option value="" disabled selected>Attempt</option>
                   <option value="Dec 2022 Plan I">Dec 2022 Plan I</option>
                   <option value="Dec 2022 & June 2023 Plan Q">Dec 2022 & June 2023 Plan Q</option>
@@ -114,8 +114,8 @@
                   +
                 </div>
               </div>  
-              <div class="my-5">
-                <select name="Attempt03" class="papers">
+              <div class="my-5 hidden" id="Attempt03">
+                <select name="Attempt03" class="papers hidden"  >
                   <option value="" disabled selected>Attempt</option>
                   <option value="Dec 2022 Plan I">Dec 2022 Plan I</option>
                   <option value="Dec 2022 & June 2023 Plan Q">Dec 2022 & June 2023 Plan Q</option>
@@ -128,34 +128,34 @@
             <div class="row justify-content-center">
         
             <div class="col-5 col-sm-5 input-field mx-3 my-5">
-              <input id="name" type="text" class="validate" name="Name" >
+              <input id="name" type="text" class="validate" name="Name" required>
               <label for="name">Name</label>
             </div>
             <div class="col-5 col-sm-5 input-field mx-3 my-5">
-              <input id="guardian-name" type="text" class="validate" name="Guardian_Name" >
+              <input id="guardian-name" type="text" class="validate" name="Guardian_Name" required>
               <label for="guardian-name">Father's/Guardian's Name</label>
             </div>
             <div class="col-5 col-sm-5 input-field mx-3 my-5">
-              <input id="phone" type="number" class="validate" name="Phone" >
+              <input id="phone" type="number" class="validate" name="Phone" required>
               <label for="phone">Phone#</label>
             </div>
             <div class="col-5 col-sm-5 input-field mx-3 my-5">
-              <input id="guardian-phone" type="number" class="validate" name="Guardian_Phone"  >
+              <input id="guardian-phone" type="number" class="validate" name="Guardian_Phone" required>
               <label for="guardian-phone">Father's/Guardian's Phone#</label>
             </div>
             <div class="col-5 col-sm-5 input-field mx-3 my-5">
-              <input id="cnic" type="tel" class="validate" name="CNIC" pattern="[0-9]{13}"  >
+              <input id="cnic" type="tel" class="validate" name="CNIC" pattern="[0-9]{5}-[0-9]{8}-[0-9]{1}" required>
               <label for="cnic">CNIC</label>
             </div>
             <div class="col-5 col-sm-5 input-field mx-3 my-5">
-              <input id="e-mail" type="email" class="validate" name="Email" >
+              <input id="e-mail" type="email" class="validate" name="Email" required>
               <label for="e-mail">E-mail</label>
             </div>
             <div class="col-5 col-sm-5 input-field mx-3 my-5">
               <div class="file-field input-field">
                 <div class="btn">
                   <!-- <span class="btn-large waves-effect waves-light upload-button">Upload</span> -->
-                  <input type="file" id="ICAP" accept="image/*">
+                  <input type="file" id="ICAP" accept="image/*" required>
                 </div>
                 <div class="file-path-wrapper">
                   <input class="file-path validate" type="text" placeholder="ICAP Card" name="ICAP" >
@@ -164,7 +164,7 @@
               </div>
             </div>
             <div class="col-5 col-sm-5 input-field mx-3 my-5">
-              <select name="State/Province" id="province">
+              <select name="State/Province" id="province" required>
                 <option value="" disabled selected>Province</option>
                 <option value="sindh">Sindh</option>
                 <option value="balochistan">Balochistan</option>
@@ -174,29 +174,55 @@
             </div>
             <div class="col-5 col-sm-5 input-field mx-3 my-sm-3">
               <label>CITY
-                <input list="cities" name="City" class="validate"/></label>
+                <input list="cities" name="City" class="validate" id="city-input" required/></label>
                 <datalist id="cities">
                 </datalist>
             </div>
 
-            <div class="col-5 col-sm-5 input-field mx-3 my-5">
-              <input list="Areas" name="Area" class="validate"/></label>
+            <div class="col-5 col-sm-5 input-field mx-3 my-3 dp-none" id="area-input">
+              <label>Area/Locality
+              <input list="Areas" name="Area/Locality" class="validate" /></label>
                 <datalist id="Areas">
-
+                  <option value="Gulshan e Iqbal">
+                  <option value="Gulistan e Jauhar">
+                  <option value="FB Area">
+                  <option value="North Nazimabad">
+                  <option value="Shahrah-e-Faisal">
+                  <option value="Liaquatabad">
+                  <option value="Gulshan e Shamim">
+                  <option value="Gulzar e Hijri">
+                  <option value="PECHS">
+                  <option value="SMCHS">
+                </datalist>
+            </div>
+          </div>
+            <div class="row justify-content-around my-5">
+            <div class="col-5 col-sm-5 input-field mx-3 my-3">
+              <label>Qualification
+              <input list="institutes" name="Qualification" class="validate" required/></label>
+                <datalist id="institutes">
+                  <option value="Intermediate (I.COM)">
+                  <option value="Intermediate (Pre Engr)">
+                  <option value="Intermediate (Pre Med)">
+                  <option value="O/A Levels">
+                  <option value="Agha Khan Board">
                 </datalist>
             </div>
             <div class="col-5 col-sm-5 input-field mx-3 my-5">
               <input id="coupon" type="text" class="validate" name="Coupon" >
               <label for="coupon">Coupon</label>
+              <span>Type "city20" eg."karachi20"</span><br>
+              <span id="coupon-span" style="color: green;"></span>
             </div>
             <div class="col-12 col-sm-7 d-flex justify-content-center mb-4">
               <div class="amount-box-1">PKR&nbsp;</div>
-              <div class="amount-box-2">&nbsp;&nbsp;123,131</div>
+              <div class="amount-box-2">&nbsp;&nbsp;00</div>
             </div>
-          
-            <div class="col-6 col-sm-5 mx-5 d-flex justify-content-center">
+            <div class="loader dp-none"></div>
+            <div class="col-12 col-sm-12 mx-5 d-flex justify-content-center">
               <input type="text" name="ICAP_Card" class="dp-none">
-              <button class="btn-large waves-effect waves-light submit-button" type="submit" name="action">Submit
+              <input type="text" name="Paper(s)" class="dp-none">
+              <button class="btn-large waves-effect waves-light submit-button mb-5" type="submit" name="action" id="submit-btn">Submit
                 <!-- <i class="material-icons right">send</i> -->
               </button>
             </div>
@@ -206,7 +232,8 @@
       </div>
     </div>
       <!-- FORM END -->
-      <div class="row">
+      <div class="" id="courses-row" >
+      <div class="row" >
         <div class="col-6 col-md-4">
           <img src="./sources/CFAP 1.jpg" alt="" class="w-100" />
         </div>
@@ -226,11 +253,13 @@
           <img src="./sources/CFAP 6.jpg" alt="" class="w-100" />
         </div>
       </div>
+    
       <div class="row justify-content-center my-3">
         <div class="col-8 text-center text-white background-green py-2 border-button">
           GET YOURSELVES REGISTERED NOW
-        </div>
+        </div>  
       </div>
+    </div>
       <div class="row gx-5">
         <div
           class="col-6 d-flex justify-content-center text-white background-green"
@@ -672,7 +701,7 @@
       <!-- COURSES END -->
 
       <!-- COURSES MODAL 03 -->
-      <div class="modal modal-sm-w-100 modal-sm-w-25 fade " id="courseModal03" tabindex="-1" aria-labelledby="courseModal03Label" aria-hidden="true">
+      <div class="modal modal-sm-w-100 modal-sm-w-25 fade"  id="courseModal03" tabindex="-1" aria-labelledby="courseModal03Label" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -720,7 +749,11 @@
       document.addEventListener('DOMContentLoaded', function() {
       var elems = document.querySelectorAll('select');
       M.FormSelect.init(elems);
+      
   });
+    </script>
+    <script>
+      
     </script>
   </body>
 </html>
