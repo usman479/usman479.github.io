@@ -225,8 +225,8 @@ function removeCourse03 (e) {
           flag3 = true;
           removeFlag3 = false;
         }
-        attempt.classList.add("hidden");
-        attemptSelect.removeAttribute("required");
+        attempt3.classList.add("hidden");
+        attempt3Select.removeAttribute("required");
         close03.setAttribute("disabled","disabled");
         paper03 = "";
         plus03.classList.add("dp-none");
@@ -560,7 +560,7 @@ function delPlusBox02(e){
   boxes.innerHTML = "";
   paper02 = "";
 }
-function delPlusBox02(e){
+function delPlusBox03(e){
   let boxes = document.querySelectorAll(".course-select-boxes")[2];
   plus03.classList.remove("dp-none");
   boxes.innerHTML = "";
