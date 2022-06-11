@@ -1,0 +1,479 @@
+/* Media Quries */
+
+@media only screen and (max-width: 1920px) and (min-width: 1800px) {
+    .carousel_inner .bg-img{
+        height: 35vw;
+        background-size: 100% 35vw;
+    }
+    .carousel_img{
+        height: 35vw;
+     }
+    .carousel_caption{
+        padding: 2rem 10rem;
+     }
+     .bg-img img{
+         width: 15%;
+         float: right;
+         margin: 0 12% 0 auto;
+         padding-top: 10%;
+     }
+     .carousel_item{
+       height: 35vw;
+    }
+    #faculty-profile .accordion-body .profile-card{
+        margin: 90px 0 50px 0;
+    }
+    .accordion-body .profile-card .profile-margin{
+        margin-top: -115px;
+    }
+}
+@media only screen and (max-width: 1799px) and (min-width: 1600px) {
+    
+    #faculty-profile .accordion-body .profile-card{
+        margin: 90px 0 50px 0;
+    }
+    .accordion-body .profile-card .profile-margin{
+        margin-top: -98px;
+    }
+}
+@media only screen and (max-width: 1599px) and (min-width: 1400px) {
+    
+    #faculty-profile .accordion-body .profile-card{
+        margin: 90px 0 50px 0;
+    }
+    .accordion-body .profile-card .profile-margin{
+        margin-top: -88px;
+    }
+}
+@media only screen and (max-width: 1399px) and (min-width: 1200px) {
+    
+    #faculty-profile .accordion-body .profile-card{
+        margin: 90px 0 50px 0;
+    }
+    .accordion-body .profile-card .profile-margin{
+        margin-top: -75px;
+    }
+}
+
+@media only screen and (max-width: 1499px) and (min-width: 1240px) {
+    .carousel_inner .bg-img{
+        height: 50vw;
+        background-size: 100% 50vw;
+    }
+    .carousel_img{
+        height: 50vw;
+     }
+     .carousel_caption{
+        top: 35%;
+        height: auto;
+         padding: 0rem 10rem;
+      }
+      .bg-img img{
+          width: 20%;
+          float: right;
+          margin: 0 12% 0 auto;
+          padding-top: 15%;
+      }
+      .carousel_item{
+        height: 50vw;
+     }
+    
+}
+
+@media only screen and (max-width: 1239px) and (min-width: 992px) {
+    
+    .carousel_inner .bg-img{
+        height: 50vw;
+        background-size: 100% 50vw;
+    }
+    .carousel_img{
+        height: 50vw;
+     }
+     .carousel_caption{
+        top: 35%;
+        height: auto;
+         padding: 0rem 5rem;
+      }
+      .bg-img img{
+          width: 20%;
+          float: right;
+          margin: 0 12% 0 auto;
+          padding-top: 15%;
+      }
+      .carousel_item{
+        height: 50vw;
+     }
+     .carousel_caption h1{
+         font-size: 30px;
+     }
+     .carousel_caption h4{
+         margin: 5px 0 0 0;
+         font-size: 20px;
+     }
+     #faculty-profile .accordion-body .profile-card{
+        margin: 90px 0 50px 0;
+    }
+    .accordion-body .profile-card .profile-margin{
+        margin-top: -65px;
+    }
+    
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    #faculty-profile .accordion-body .profile-card{
+        margin: 90px 0 50px 0;
+    }
+    .accordion-body .profile-card .profile-margin{
+        margin-top: -100px;
+    }
+    #courses .button-course img{
+        width: 70%;
+    }
+    
+    .carousel_inner .bg-img{
+        height: 50vw;
+        background-size: 100% 50vw;
+    }
+    .carousel_img{
+        height: 50vw;
+     }
+     .carousel_caption{
+        top: 35%;
+        height: auto;
+         padding: 0rem 5rem;
+      }
+      .bg-img img{
+          width: 20%;
+          float: right;
+          margin: 0 12% 0 auto;
+          padding-top: 15%;
+      }
+      .carousel_item{
+        height: 50vw;
+     }
+     .carousel_caption h1{
+         font-size: 35px;
+     }
+     .carousel_caption h4{
+        margin: 5px 0 0 0;
+         font-size: 25px;
+     }
+     #exampleModal .modal-dialog .modal-content .modal-body .course-img img{
+         width: 100%;
+     }
+     #exampleModal .modal-dialog .modal-content .modal-body form #submit-btn{
+         width: 100%;
+     }
+}
+
+@media only screen and (max-width: 767px) {
+    .carousel_inner .bg-img{
+        height: 50vw;
+        background-size: 100% 50vw;
+    }
+    .carousel_img{
+        height: 50vw;
+     }
+     .carousel_caption{
+        top: 35%;
+        height: auto;
+         padding: 0rem 5rem;
+      }
+      .carousel_caption h1{
+          font-size: 30px;
+      }
+      .carousel_caption h4{
+          font-size: 20px;
+      }
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 205px }
+      }
+      .bg-img img{
+          width: 20%;
+          float: right;
+          margin: 0 12% 0 auto;
+          padding-top: 15%;
+      }
+      .carousel_item{
+        height: 50vw;
+     }
+     #features .reverse{
+         display: flex;
+         flex-direction: column-reverse;
+     }
+     #faculty-profile .accordion-body .profile-card .profile-img-1 img{
+         width: 50%;
+     }
+     .accordion-body .profile-card .profile-text{
+         text-align: center;
+     }
+     .accordion-body .profile-card .profile-text h5{
+         margin: auto auto 8px auto;
+     }
+     .accordion-body .profile-card .profile-text p{
+         margin: auto;
+     }
+     #faculty-profile .accordion-body .profile-card{
+         text-align: center;
+        margin: 90px 0 50px 0;
+    }
+    .accordion-body .profile-card .profile-margin{
+        margin-top: -115px;
+    }
+    #buttons .border-color{
+        border-right: none !important;
+    }
+    #buttons .border-color-1{
+        border-left: none !important;
+    }
+    #buttons .buy-1-course a h1{
+        font-size: 30px;
+    }
+    #buttons .buy-combo a h1 {
+        font-size: 30px;
+    }
+    #courses .button-course img{
+        width: 85%;
+    }
+    .join-button a .btn{
+        width: 90%;
+    }
+    footer .left-border{
+        border-left: none;
+        border-bottom: 1px solid #fff;
+        padding: 15px 0;
+    }
+    .footer-border-bottom-up{
+        border-bottom: 1px solid #fff;
+        padding: 15px 0;
+
+    }
+    .footer-border-bottom{
+        border-bottom: 1px solid #fff;
+        padding: 15px 0;
+    }
+    #exampleModal .modal-dialog .modal-content .modal-body .course-img img{
+        width: 100%;
+    }
+    #exampleModal .modal-dialog .modal-content .modal-body form #submit-btn{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    
+     .carousel_caption{
+        top: 40%;
+        height: auto;
+         padding: 0rem 3.5rem;
+      }
+      .carousel_caption h1{
+        font-size: 20px;
+      }
+      .carousel_caption h4{
+        margin: 5px 0 0 0;
+        font-size: 15px;
+      }
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 165px }
+      }
+}
+
+@media only screen and (max-width: 575px) {
+    header .logo img{
+        width: 100%;
+    }
+    .icon .bi-facebook{
+        font-size: 22px;
+    }
+    .icon .bi-twitter{
+        font-size: 22px;
+        margin-left: 8px;
+    }
+    .icon .bi-linkedin{
+        font-size: 22px;
+        margin-left: 8px;
+    }
+    .icon .bi-youtube{
+        font-size: 22px;
+        margin-left: 8px;
+    }
+    .icon .bi-whatsapp{
+        font-size: 22px;
+        margin-left: 8px;
+    }
+    #faculty-profile .accordion-button{
+        padding: 16px 12px;
+    }
+    .accordion-body {
+        padding: 16px 17px;
+    }
+    #accordians .accordion-button {
+        padding: 16px 12px;
+    }
+    #buttons .buy-1-course a h1{
+        font-size: 20px;
+    }
+    #buttons .buy-combo a h1 {
+        font-size: 20px;
+    }
+    #courses .button-course{
+        margin-bottom: -10px;
+    }
+    #courses .button-course img{
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    
+    header .logo img{
+        width: 100%;
+    }
+    .icon .bi-facebook{
+        font-size: 16px;
+    }
+    .icon .bi-twitter{
+        font-size: 16px;
+        margin-left: 8px;
+    }
+    .icon .bi-linkedin{
+        font-size: 16px;
+        margin-left: 8px;
+    }
+    .icon .bi-youtube{
+        font-size: 16px;
+        margin-left: 8px;
+    }
+    .icon .bi-whatsapp{
+        font-size: 16px;
+        margin-left: 8px;
+    }
+     .carousel_caption{
+        top: 38%;
+        height: auto;
+         padding: 0rem 1.8rem;
+      }
+      .carousel_caption h1{
+          font-size: 15px;
+      }
+      .carousel_caption h4{
+          margin: 5px 0 0 0;
+          font-size: 12px;
+      }
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 140px }
+      }
+      .accordion-body .profile-card .profile-text h5 {
+        width: 200px;
+        font-size: 12px;
+    }
+    #buttons .buy-1-course a h1{
+        font-size: 16px;
+    }
+    #buttons .buy-combo a h1 {
+        font-size: 16px;
+    }
+    #courses .button-course{
+        margin-bottom: -8px;
+    }
+    #courses .button-course img{
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .accordion-body .profile-card .profile-text .para-0{
+        width: 80%;
+        text-align: center;
+        font-size: 8px;
+    }
+    
+    
+    .accordion-body .profile-card .profile-text .para-1{
+        width: 80%;
+        text-align: center;
+        font-size: 8px;
+    }
+    
+    
+    .accordion-body .profile-card .profile-text .para-2{
+        width: 80%;
+        text-align: center;
+        font-size: 8px;
+    }
+    
+    
+    .accordion-body .profile-card .profile-text .para-3{
+        width: 80%;
+        text-align: center;
+        font-size: 8px;
+    }
+    .accordion-body .profile-card .profile-text .span{
+        font-size: 12px;
+    }
+    .accordion-body .profile-card .profile-text .span-1{
+        font-size: 12px;
+    }
+    .accordion-body .profile-card .profile-text .span-2{
+        font-size: 12px;
+    }
+    .accordion-body .profile-card .profile-text .span-3{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 310px) {
+    .icon .bi-facebook{
+        font-size: 14px;
+    }
+    .icon .bi-twitter{
+        font-size: 14px;
+        margin-left: 8px;
+    }
+    .icon .bi-linkedin{
+        font-size: 14px;
+        margin-left: 8px;
+    }
+    .icon .bi-youtube{
+        font-size: 14px;
+        margin-left: 8px;
+    }
+    .icon .bi-whatsapp{
+        font-size: 14px;
+        margin-left: 8px;
+    }
+    #buttons .buy-1-course a h1{
+        font-size: 14px;
+    }
+    #buttons .buy-combo a h1 {
+        font-size: 14px;
+    }
+    #courses .button-course{
+        margin-bottom: -5px;
+    }
+    #courses .button-course img{
+        width: 80%;
+    }
+    .carousel_caption{
+       top: 38%;
+       height: auto;
+        padding: 0rem 1.5rem;
+     }
+     .carousel_caption h1{
+         font-size: 10px;
+     }
+     .carousel_caption h4{
+         margin: 0;
+         font-size: 10px;
+     }
+     @keyframes typing {
+       from { width: 0 }
+       to { width: 123px }
+     }
+}
+
+/* Media Quries End */

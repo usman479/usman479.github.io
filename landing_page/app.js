@@ -134,12 +134,12 @@ function counter01(e) {
   }
     attempt.classList.remove("hidden");
     attemptSelect.setAttribute("required","required");
-    paper01 = e.getAttribute("value");
+    paper01 = e.target.value;
     close01.removeAttribute("disabled");
     plus01.classList.remove("dp-none");
     
-    addPlusBox01(e);
-    priceCalc();
+    // addPlusBox01(e);
+    // priceCalc();
     courseModal01.toggle();
 }
 function counter02(e) {
@@ -170,6 +170,7 @@ function counter03(e) {
     attempt3.classList.remove("hidden");
     attempt3Select.setAttribute("required","required");
     paper03 = e.getAttribute("value");
+    console.log(paper03);
     close03.removeAttribute("disabled");
     plus03.classList.remove("dp-none");
     addPlusBox03(e);
@@ -238,15 +239,14 @@ function removeCourse03 (e) {
 }
 
 let amountBox = document.querySelectorAll(".amount-box-2")[0];
+let price = 0;
 function priceCalc () {
-  if(count === 1){
-    amountBox.innerHTML = "&nbsp;&nbsp;25,000"
-  } else if (count === 2){
-    amountBox.innerHTML = "&nbsp;&nbsp;40,000"
-  } else if(count === 3){
-    amountBox.innerHTML = "&nbsp;&nbsp;50,000"
-  } else if(count === 0) {
-    amountBox.innerHTML = "&nbsp;&nbsp;00"
+  if(count == 1){
+
+  } else if(count == 2){
+
+  } else if(count == 3){
+
   }
 }
 
@@ -333,7 +333,7 @@ cities.addEventListener("change", () => {
 });
 
 const scriptURL =
-  "https://script.google.com/macros/s/AKfycbxngfvVQfWAr-XpcDx6oMnw9LhzlX-EzsElea20jYqpFhLaO16juRhMrSCzQts0fMGEtA/exec";
+  "https://script.google.com/macros/s/AKfycbyEaVw7M1LMWA6dD0aqwDlWQjeSixJV5SRYAqe_UQJfhHCd40KzylLAMXdZ6CYMD7HE/exec";
 let form = document.forms["registration-form"];
 
 
@@ -382,7 +382,12 @@ form.addEventListener("submit", (e) => {
           .getDownloadURL()
           .then((url) => {
             console.log("1st");
-            form.ICAP_Card.value = url;
+            console.log(form["ICAP"].value);
+            console.log(form.Name.value);
+            console.log(form.Phone.value);
+            console.log();
+            console.log();
+            console.log();
           })
           .then(() => {
             console.log("2nd");
