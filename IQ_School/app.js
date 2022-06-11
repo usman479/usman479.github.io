@@ -114,6 +114,7 @@ var courseModal01 = new bootstrap.Modal(document.getElementById('courseModal01')
 })
 
 var modalTry = document.getElementById("courseModal01");
+var pricingModal = document.getElementById("exampleModal2");
 let courseImages = document.getElementsByClassName("course-image");
 
 let plusBox01 = document.getElementById("plus-box-01");
@@ -137,9 +138,16 @@ modalTry.addEventListener("show.bs.modal",function(e){
         courseImages[i].setAttribute("onclick","counter03(this)");
       }
   }
-  
-
 });
+
+// pricingModal.addEventListener("show.bs.modal", function(e) {
+//   var button = e.relatedTarget;
+//   var recipient = button.getAttribute('data-bs-whatever');
+//   if(recipient === "toggle-me"){
+//     pricingModal.toggle();
+//     formModal.toggle();
+//   }
+// })
 
 let [box01,box02,box03] = document.getElementsByClassName("course-select-boxes");
 let remove1 = document.getElementById("remove-01");
@@ -159,6 +167,7 @@ function counter01(e) {
   plusBox01.src = e.src;
   remove1.classList.remove("bg-none")
   priceCalc();
+  couponChecker(coupon,true);
   courseModal01.toggle();
   formModal.toggle();
   
@@ -177,6 +186,7 @@ function counter02(e) {
     plusBox02.src = e.src;
     remove2.classList.remove("bg-none")
     priceCalc();
+    couponChecker(coupon,true);
     courseModal01.toggle();
     formModal.toggle();
     
@@ -195,11 +205,38 @@ function counter03(e) {
     plusBox03.src = e.src;
     remove3.classList.remove("bg-none")
     priceCalc();
+    couponChecker(coupon,true);
     courseModal01.toggle();
     formModal.toggle();
     
 }
 
+
+// COUPON //
+let couponSpan = document.querySelector("#coupon-span");
+let coupon = document.querySelector("#coupon");
+
+function couponChecker(e,f=false){
+  couponSpan.innerHTML = "";
+  if(f){
+    if((cityInput.value+"20").toUpperCase() === e.value){
+        
+        couponSpan.innerHTML = "Discount Received";
+        discPriceCalc();
+      } else {
+        priceCalc();
+      }
+  }else {
+    if((cityInput.value+"20").toUpperCase() === e.target.value){
+    
+     couponSpan.innerHTML = "Discount Received";
+     discPriceCalc();
+  } else {
+    priceCalc();
+  }
+  }
+  
+}
 
 function removeCourse01 (e) {
         if(removeFlag1){
@@ -214,6 +251,8 @@ function removeCourse01 (e) {
         e.classList.add("bg-none");
         paper01 = "";
         priceCalc();
+        couponChecker(coupon,true);
+        
 
 }
 function removeCourse02 (e) {
@@ -229,6 +268,7 @@ function removeCourse02 (e) {
       e.classList.add("bg-none");
       paper02 = "";
       priceCalc();
+      couponChecker(coupon,true);
 }
 function removeCourse03 (e) {
   if(removeFlag3){
@@ -243,6 +283,7 @@ function removeCourse03 (e) {
   e.classList.add("bg-none");
   paper03 = "";
   priceCalc();
+  couponChecker(coupon,true);
 }
 
 let amountBox = document.querySelectorAll(".rupee")[0];
@@ -262,9 +303,10 @@ function priceChartFunc() {
       price = 30000;
     } else if((paper01.substring(0,6) == "CFAP 3" || paper01.substring(0,6) == "CFAP 4") && (paper02.substring(0,6) == "CFAP 3" || paper02.substring(0,6) == "CFAP 4")){
       price = 21000;
+    } else {
+      price = 40000;
     }
   } else if(paper01 && paper03){
-    console.log("hellooo");
 
     if((paper01.substring(0,6) == "CFAP 1" || paper01.substring(0,6) == "CFAP 6") && (paper03.substring(0,6) == "CFAP 1" || paper03.substring(0,6) == "CFAP 6")){
       price = 38000;
@@ -278,6 +320,8 @@ function priceChartFunc() {
       price = 30000;
     } else if((paper01.substring(0,6) == "CFAP 3" || paper01.substring(0,6) == "CFAP 4") && (paper03.substring(0,6) == "CFAP 3" || paper03.substring(0,6) == "CFAP 4")){
       price = 21000;
+    } else {
+      price = 40000;
     }
 
   } else if(paper02 && paper03){
@@ -293,6 +337,8 @@ function priceChartFunc() {
       price = 30000;
     } else if((paper02.substring(0,6) == "CFAP 3" || paper02.substring(0,6) == "CFAP 4") && (paper03.substring(0,6) == "CFAP 3" || paper03.substring(0,6) == "CFAP 4")){
       price = 21000;
+    } else {
+      price = 40000;
     }
   }
 }
@@ -308,6 +354,7 @@ function priceCalc () {
     price = 0;
   }
   amountBox.innerHTML = price;
+  
 }
 function discPriceCalc () {
   amountBox.innerHTML = "";
@@ -322,21 +369,9 @@ function discPriceCalc () {
 }
 
 
-
-// COUPON //
-let couponSpan = document.querySelector("#coupon-span");
-let coupon = document.querySelector("#coupon");
+coupon.addEventListener("keyup", couponChecker);
 
 
-coupon.addEventListener("keyup", (e) => {
-  couponSpan.innerHTML = "";
-  if((cityInput.value+"20") === e.target.value){
-     couponSpan.innerHTML = "Discount Received";
-     discPriceCalc();
-  } else {
-    priceCalc();
-  }
-})
 
 
 // SLIDER //
