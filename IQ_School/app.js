@@ -112,6 +112,10 @@ var formModal = new bootstrap.Modal(document.getElementById('exampleModal'), {
 var courseModal01 = new bootstrap.Modal(document.getElementById('courseModal01'), {
   keyboard: false
 })
+var priceModalForm = new bootstrap.Modal(document.getElementById('exampleModal3'), {
+  keyboard: false
+})
+
 
 var modalTry = document.getElementById("courseModal01");
 var pricingModal = document.getElementById("exampleModal2");
@@ -140,14 +144,11 @@ modalTry.addEventListener("show.bs.modal",function(e){
   }
 });
 
-// pricingModal.addEventListener("show.bs.modal", function(e) {
-//   var button = e.relatedTarget;
-//   var recipient = button.getAttribute('data-bs-whatever');
-//   if(recipient === "toggle-me"){
-//     pricingModal.toggle();
-//     formModal.toggle();
-//   }
-// })
+
+function toggleFormModal(){
+  priceModalForm.toggle();
+  formModal.toggle();
+}
 
 let [box01,box02,box03] = document.getElementsByClassName("course-select-boxes");
 let remove1 = document.getElementById("remove-01");
@@ -292,7 +293,7 @@ function priceChartFunc() {
   console.log("01" + !(!paper01) +"02" +!(!paper02)+"03"+!(!paper03));
   if(paper01 && paper02){
     if((paper01.substring(0,6) == "CFAP 1" || paper01.substring(0,6) == "CFAP 6") && (paper02.substring(0,6) == "CFAP 1" || paper02.substring(0,6) == "CFAP 6")){
-      price = 38000;
+      price = 40000;
     } else if((paper01.substring(0,6) == "CFAP 1" || paper01.substring(0,6) == "CFAP 3") && (paper02.substring(0,6) == "CFAP 1" || paper02.substring(0,6) == "CFAP 3")){
       price = 24000;
     } else if((paper01.substring(0,6) == "CFAP 1" || paper01.substring(0,6) == "CFAP 4") && (paper02.substring(0,6) == "CFAP 1" || paper02.substring(0,6) == "CFAP 4")){
@@ -302,14 +303,14 @@ function priceChartFunc() {
     } else if((paper01.substring(0,6) == "CFAP 6" || paper01.substring(0,6) == "CFAP 4") && (paper02.substring(0,6) == "CFAP 6" || paper02.substring(0,6) == "CFAP 4")){
       price = 30000;
     } else if((paper01.substring(0,6) == "CFAP 3" || paper01.substring(0,6) == "CFAP 4") && (paper02.substring(0,6) == "CFAP 3" || paper02.substring(0,6) == "CFAP 4")){
-      price = 21000;
+      price = 22000;
     } else {
       price = 40000;
     }
   } else if(paper01 && paper03){
 
     if((paper01.substring(0,6) == "CFAP 1" || paper01.substring(0,6) == "CFAP 6") && (paper03.substring(0,6) == "CFAP 1" || paper03.substring(0,6) == "CFAP 6")){
-      price = 38000;
+      price = 40000;
     } else if((paper01.substring(0,6) == "CFAP 1" || paper01.substring(0,6) == "CFAP 3") && (paper03.substring(0,6) == "CFAP 1" || paper03.substring(0,6) == "CFAP 3")){
       price = 24000;
     } else if((paper01.substring(0,6) == "CFAP 1" || paper01.substring(0,6) == "CFAP 4") && (paper03.substring(0,6) == "CFAP 1" || paper03.substring(0,6) == "CFAP 4")){
@@ -319,14 +320,14 @@ function priceChartFunc() {
     } else if((paper01.substring(0,6) == "CFAP 6" || paper01.substring(0,6) == "CFAP 4") && (paper03.substring(0,6) == "CFAP 6" || paper03.substring(0,6) == "CFAP 4")){
       price = 30000;
     } else if((paper01.substring(0,6) == "CFAP 3" || paper01.substring(0,6) == "CFAP 4") && (paper03.substring(0,6) == "CFAP 3" || paper03.substring(0,6) == "CFAP 4")){
-      price = 21000;
+      price = 22000;
     } else {
       price = 40000;
     }
 
   } else if(paper02 && paper03){
     if((paper02.substring(0,6) == "CFAP 1" || paper02.substring(0,6) == "CFAP 6") && (paper03.substring(0,6) == "CFAP 1" || paper03.substring(0,6) == "CFAP 6")){
-      price = 38000;
+      price = 40000;
     } else if((paper02.substring(0,6) == "CFAP 1" || paper02.substring(0,6) == "CFAP 3") && (paper03.substring(0,6) == "CFAP 1" || paper03.substring(0,6) == "CFAP 3")){
       price = 24000;
     } else if((paper02.substring(0,6) == "CFAP 1" || paper02.substring(0,6) == "CFAP 4") && (paper03.substring(0,6) == "CFAP 1" || paper03.substring(0,6) == "CFAP 4")){
@@ -336,7 +337,7 @@ function priceChartFunc() {
     } else if((paper02.substring(0,6) == "CFAP 6" || paper02.substring(0,6) == "CFAP 4") && (paper03.substring(0,6) == "CFAP 6" || paper03.substring(0,6) == "CFAP 4")){
       price = 30000;
     } else if((paper02.substring(0,6) == "CFAP 3" || paper02.substring(0,6) == "CFAP 4") && (paper03.substring(0,6) == "CFAP 3" || paper03.substring(0,6) == "CFAP 4")){
-      price = 21000;
+      price = 22000;
     } else {
       price = 40000;
     }
@@ -368,11 +369,7 @@ function discPriceCalc () {
   amountBox.innerHTML = price;
 }
 
-
 coupon.addEventListener("keyup", couponChecker);
-
-
-
 
 // SLIDER //
 var slider = document.querySelector(".form-slider");

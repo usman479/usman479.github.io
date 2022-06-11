@@ -699,7 +699,8 @@
       <div class="container">
         <div class="row">
           <div class="col-md-3 footer-border-bottom-up align-self-center">
-            <a href="#faculty-profile"><p class="m-0">Faculty</p></a>
+            <a href="#faculty-profile" ><p class="m-0" data-bs-toggle="collapse" data-bs-target="#collapse1"
+              aria-expanded="true" aria-controls="collapseOne">Faculty</p></a>
           </div>
           <div class="col-md-3 footer-border-bottom align-self-center">
             <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2"><p class="m-0">Pricing Chart</p></a>
@@ -820,6 +821,7 @@
                     <option value="Gulzar e Hijri">Gulzar e Hijri</option>
                     <option value="PECHS">P.E.C.H.S</option>
                     <option value="SMCHS">S.M.C.H.S</option>
+                    <option value="Other">Other</option>
                   </select>
                 </div>
               </div>
@@ -853,8 +855,8 @@
               <div class="submit-button">
                 <button class="btn btn-outline-success submit-button mb-5" type="submit" name="action" id="submit-btn">Submit
                 </button>
-                <span id="warning-span" style="color: red;"></span>
-                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" data-bs-whatever="toggle-me" style="color: #0C9077; text-decoration: underline;">Pricing Chart</a>
+                <span id="warning-span" style="color: red;"></span><br>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" data-bs-whatever="toggle-me" style="color: #0C9077; text-decoration: underline;font-size: 20px;">Pricing Chart</a>
               </div>
             </form>
           </div>
@@ -887,6 +889,27 @@
     </div>
 
     <!-- Price Chart End -->
+
+    <!-- Price Chart Form -->
+    
+    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLabel3">Price Chart</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="./sources/fee_structure_1.png" width="100%" alt="fees">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" onclick="toggleFormModal();">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Price Chart Form End -->
 
     <!-- COURSES MODAL 01 -->
     <div class="modal fade" id="courseModal01" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
