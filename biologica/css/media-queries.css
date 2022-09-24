@@ -1,0 +1,718 @@
+@media only screen and (max-width: 5000px) and (min-width: 768px){
+    /* Contact Us Start */
+    #mobile-contact-banner{
+        display: none;
+    }
+    /* Contact Us End */
+}
+
+
+@media only screen and (max-width: 1200px) and (min-width: 992px){
+    /* Contact Us Start */
+    #contact-banner .banner-text .text hr{
+        width: 85%;
+    }
+    /* Contact Us End */
+
+    /* Home Start */
+    #home-section .cards .card-shadow{
+        width: 100%;
+    }
+    #home-section .improve-health .image .text{
+        position: absolute;
+        top: 30%;
+        left: 8%;
+        right: 35%;
+    }
+    #home-section .cards .card-1 .text h2{
+        font-size: 28px;
+    }
+    #home-section .cards .card-2 .text h2{
+        font-size: 28px;
+    }
+    #home-section .cards .card-3 .text h2{
+        font-size: 28px;
+    }
+    #home-section .capibilty-cards .card-1 .text h3{
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    #home-section .cards .card-1 .text h2{
+        padding: 0 0 57px 0;
+    }
+    #home-section .cards .card-2 .text h2{
+        padding: 0 0 53px 0;
+    }
+    #home-section .capibilty-cards .card-1 .text .home-paragraph{
+        padding-bottom: 30px;
+    }
+    #home-section .capibilty-cards .card-1 .text .home-paragraph-less h5{
+        font-weight: 400;
+        text-align: justify;
+        margin-bottom: 224px;
+        color: rgb(143, 143, 143);
+    }
+    #home-section .capibilty-cards .card-2 .text h3{
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    #home-section .capibilty-cards .card-3 .text h3{
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    #home-section .capibilty-cards .card-3 .text .home-paragraph{
+        padding-bottom: 30px;
+    }
+    #home-section .capibilty-cards .card-3 .text .home-paragraph-less h5{
+        font-weight: 400;
+        text-align: justify;
+        margin-bottom: 122px;
+        color: rgb(143, 143, 143);
+    }
+    /* Home End */
+}
+
+
+@media only screen and (max-width: 991px) and (min-width: 768px){
+    /* About Us Start */
+    #biologica-content-section .about-heading h1{
+        font-size: 30px;
+    }
+    /* About Us End */
+
+    /* Contact Us Start */
+    #contact-banner .banner-text .text h1{
+        font-size: 28px;
+    }
+    /* Contact Us End */
+
+    /* Product Start */
+    #biologica-content-section .product-2 .row{
+        display: flex;
+        flex-direction: column-reverse;
+        
+    }
+    #biologica-content-section .product-4 .row{
+        display: flex;
+        flex-direction: column-reverse;
+        
+    }
+    #biologica-content-section .product-6 .row{
+        display: flex;
+        flex-direction: column-reverse;
+        
+    }
+    /* Product End */
+
+    /* Footer Start */
+    footer .footer-terms-policy h5{
+        font-size: 16px;
+    }
+    /* Footer End */
+
+    /* Home Start */
+    #home-section .home-hero-section .row{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #home-section .home-hero-section .humanity{
+        height: 400px;
+    }
+    #home-section .cards .card-shadow{
+        width: 100%;
+    }
+    #home-section .improve-health .image .text{
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        right: 13%;
+    }
+    #home-section .cards .card-shadow-1{
+        margin: auto;
+    }
+    #home-section .cards .card-shadow-3{
+        margin: auto;
+        float: none;
+    }
+    /* Home End */
+}
+
+
+@media only screen and (max-width: 767px){
+    /* Contact Us Start */
+    #contact-banner{
+        display: none;
+    }
+    #mobile-contact-banner{
+        background: url('/assets/contact/Photo-1.png');
+        background-size: cover;
+        width: 100%;
+        height: 500px;
+    }
+    #mobile-contact-banner .mobile-banner{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100%;
+        color: #fff;
+        background: linear-gradient(to bottom right, #0e0f1b, #0e1836, #0e0f1b);
+    }
+    #mobile-contact-banner .mobile-banner .banner-text .text h1{
+        font-size: 50px;
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+    #mobile-contact-banner .mobile-banner .banner-text .text hr{
+        width: 70%;
+        height: 3px;
+        margin: 16px auto 16px auto;
+        background: linear-gradient(to right,yellow, orange, red, violet, #4792e5, #0adaa8);
+    }
+    #biologica-content-section .contact-form .contact-location{
+        height: 550px;
+    }
+    /* Contact Us End */
+
+    /* Product Start */
+    #biologica-content-section .product-2 .row{
+        display: flex;
+        flex-direction: column-reverse;
+        
+    }
+    #biologica-content-section .product-4 .row{
+        display: flex;
+        flex-direction: column-reverse;
+        
+    }
+    #biologica-content-section .product-6 .row{
+        display: flex;
+        flex-direction: column-reverse;
+        
+    }
+    /* Product End */
+
+    /* Home Start */
+    #home-section .home-hero-section .row{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #home-section .home-hero-section .humanity{
+        height: 400px;
+    }
+    #home-section .cards .card-shadow{
+        width: 100%;
+    }
+    #home-section .improve-health .image .text{
+        position: absolute;
+        top: 15%;
+        left: 10%;
+        right: 13%;
+        bottom: 15%;
+    }
+    #home-section .improve-health .image .text h2{
+        font-size: 20px;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: right;
+    }
+    #home-section .cards .card-shadow-1{
+        margin: auto;
+    }
+    #home-section .cards .card-shadow-3{
+        margin: auto;
+        float: none;
+    }
+    /* Home End */
+    
+}
+
+
+@media only screen and (max-width: 767px) and (min-width: 576px){
+    /* About Us Start */
+    #biologica-content-section .about-heading h1{
+        font-size: 26px;
+    }
+    /* About Us End */
+    
+    /* Contact Us Start */
+    #mobile-contact-banner .mobile-banner .banner-text .text hr{
+        width: 80%;
+    }
+    /* Contact Us End */
+
+    /* Footer Start */
+    footer .footer-logo img{
+        width: 50%;
+    }
+    footer .footer-terms-policy{
+        margin: 50px 0;
+    }
+    /* Footer End */
+
+    /* Home Start */
+    #home-section .home-hero-section .row{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #home-section .home-hero-section .humanity{
+        height: 400px;
+    }
+    #home-section .cards .card-shadow{
+        width: 100%;
+    }
+    #home-section .testing-text h1{
+        font-size: 25px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    #home-section .home-form .form-text h1{
+        text-transform: uppercase;
+        font-size: 30px;
+        font-weight: 700;
+    }
+    #home-section .cards .card-shadow-1{
+        margin: auto;
+    }
+    #home-section .cards .card-shadow-3{
+        margin: auto;
+        float: none;
+    }
+    #biologica-nav{
+        z-index: 99;
+    }
+    #biologica-nav .navbar-brand img{
+        width: 60%;
+    }
+    #mySidenav{
+        z-index: 999;
+    }
+    /* Home End */
+}
+
+
+@media only screen and (max-width: 575px) and (min-width: 471px){
+    /* About Us Start */
+    #biologica-content-section .about-heading h1{
+        font-size: 24px;
+    }
+    /* About Us End */
+    
+    /* Contact Us Start */
+    #mobile-contact-banner .mobile-banner .banner-text .text hr{
+        width: 80%;
+    }
+    #biologica-content-section .contact-form .form h1{
+        font-size: 28px;
+    }
+    #biologica-content-section .contact-form .contact-location h1{
+        font-size: 28px;
+    }
+    /* Contact Us End */
+
+    /* Footer Start */
+    footer .footer-logo img{
+        width: 50%;
+    }
+    footer .footer-terms-policy{
+        margin: 50px 0;
+    }
+    /* Footer End */
+
+    /* Home Start */
+    #home-section .home-hero-section .row{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #home-section .home-hero-section .humanity{
+        height: 300px;
+    }
+    #home-section .cards .card-shadow{
+        width: 100%;
+    }
+    #home-section .testing-text h1{
+        font-size: 25px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    #home-section .capibilty-cards .card-1 .text h3{
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    #home-section .capibilty-cards .card-2 .text h3{
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    #home-section .capibilty-cards .card-3 .text h3{
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    #home-section .home-form .form-text h1{
+        text-transform: uppercase;
+        font-size: 25px;
+        font-weight: 700;
+    }
+    #home-section .improve-health .image .text{
+        position: absolute;
+        top: 8%;
+        left: 10%;
+        right: 13%;
+        bottom: 0;
+    }
+    #home-section .improve-health .image .text h2{
+        font-size: 18px;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: right;
+    }
+    #home-section .improve-health .image .text .hr1{
+        float: right;
+        height: 10px;
+        width: 27.8%;
+        background-color: #050b50;
+    }
+    #home-section .improve-health .image .text .hr2{
+        float: right;
+        height: 10px;
+        width: 27.8%;
+        background-color: #050b50;
+    }
+    #home-section .cards .card-shadow-1{
+        margin: auto;
+    }
+    #home-section .cards .card-shadow-3{
+        margin: auto;
+        float: none;
+    }
+    #biologica-nav{
+        z-index: 99;
+    }
+    #biologica-nav .navbar-brand img{
+        width: 100%;
+    }
+    #mySidenav{
+        z-index: 999;
+    }
+    /* Home End */
+}
+
+
+@media only screen and (max-width: 470px) and (min-width: 321px){
+    /* About Us Start */
+    #biologica-content-section .about-heading h1{
+        font-size: 22px;
+    }
+    /* About Us End */
+    
+    /* Contact Us Start */
+    #mobile-contact-banner .mobile-banner .banner-text .text hr{
+        width: 80%;
+    }
+    #biologica-content-section .contact-heading h1{
+        font-size: 35px;
+    }
+    #biologica-content-section .contact-form .form h1{
+        font-size: 23px;
+    }
+    #biologica-content-section .contact-form .contact-location h1{
+        font-size: 23px;
+    }
+    /* Contact Us End */
+
+    /* Footer Start */
+    footer .footer-logo img{
+        width: 60%;
+    }
+    footer .footer-terms-policy{
+        margin: 50px 0;
+    }
+    /* Footer End */
+
+    /* Home Start */
+    #home-section .home-hero-section .row{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #home-section .home-hero-section .humanity{
+        height: 300px;
+    }
+    #home-section .cards .card-shadow{
+        width: 100%;
+    }
+    #home-section .testing-text h1{
+        font-size: 25px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    #home-section .testing-text h1{
+        font-size: 25px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    #home-section .capibilty-cards .card-1 .text h3{
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    #home-section .capibilty-cards .card-2 .text h3{
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    #home-section .capibilty-cards .card-3 .text h3{
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    #home-section .home-form .form-text h1{
+        text-transform: uppercase;
+        font-size: 25px;
+        font-weight: 700;
+    }
+    #home-section .improve-health .image .text{
+        position: absolute;
+        top: 8%;
+        left: 8%;
+        right: 8%;
+        bottom: 0;
+    }
+    #home-section .improve-health .image .text h2{
+        font-size: 14px;
+        color: #fff;
+        margin-top: 50px;
+        text-transform: uppercase;
+        text-align: right;
+    }
+    #home-section .improve-health .image .text .hr1{
+        float: right;
+        height: 8px;
+        width: 27.8%;
+        background-color: #050b50;
+    }
+    #home-section .improve-health .image .text .hr2{
+        float: right;
+        height: 8px;
+        width: 27.8%;
+        background-color: #050b50;
+    }
+    #home-section .cards .card-shadow-1{
+        margin: auto;
+    }
+    #home-section .cards .card-shadow-3{
+        margin: auto;
+        float: none;
+    }
+    #biologica-nav{
+        z-index: 99;
+    }
+    #biologica-nav .navbar-brand img{
+        width: 100%;
+    }
+    #mySidenav{
+        z-index: 999;
+    }
+    /* Home End */
+}
+
+
+@media only screen and (max-width: 320px) and (min-width: 100px){
+    /* About Us Start */
+    #biologica-content-section .about-heading h1{
+        font-size: 20px;
+    }
+    /* About Us End */
+    
+    /* Contact Us Start */
+    #mobile-contact-banner .mobile-banner .banner-text .text hr{
+        width: 80%;
+    }
+    #biologica-content-section .contact-heading h1{
+        font-size: 35px;
+    }
+    #biologica-content-section .contact-form .form h1{
+        font-size: 20px;
+    }
+    #biologica-content-section .contact-form .contact-location h1{
+        font-size: 20px;
+    }
+    /* Contact Us End */
+    
+    /* Product Start */
+
+    /* Product 1 */
+    #biologica-content-section .product-1-text{
+        padding: 40px 10px;
+    }
+    #biologica-content-section .product-1-text .text h5{
+        font-size: 16px;
+    }
+    #biologica-content-section .product-1-text .text h1{
+        font-size: 20px;
+    }
+
+    /* Product 2 */
+    #biologica-content-section .product-2-text{
+        padding: 40px 10px;
+    }
+    #biologica-content-section .product-2-text .text h5{
+        font-size: 16px;
+    }
+    #biologica-content-section .product-2-text .text h1{
+        font-size: 20px;
+    }
+
+    /* Product 3 */
+    #biologica-content-section .product-3-text{
+        padding: 40px 10px;
+    }
+    #biologica-content-section .product-3-text .text h5{
+        font-size: 16px;
+    }
+    #biologica-content-section .product-3-text .text h1{
+        font-size: 20px;
+    }
+
+    /* Product 4 */
+    #biologica-content-section .product-4-text{
+        padding: 40px 10px;
+    }
+    #biologica-content-section .product-4-text .text h5{
+        font-size: 16px;
+    }
+    #biologica-content-section .product-4-text .text h1{
+        font-size: 20px;
+    }
+
+    /* Product 5 */
+    #biologica-content-section .product-5-text{
+        padding: 40px 10px;
+    }
+    #biologica-content-section .product-5-text .text h5{
+        font-size: 16px;
+    }
+    #biologica-content-section .product-5-text .text h1{
+        font-size: 20px;
+    }
+
+    /* Product 6 */
+    #biologica-content-section .product-6-text{
+        padding: 40px 10px;
+    }
+    #biologica-content-section .product-6-text .text h5{
+        font-size: 16px;
+    }
+    #biologica-content-section .product-6-text .text h2{
+        font-size: 20px;
+    }
+    /* Product End */
+
+    /* Footer Start */
+    footer .footer-logo img{
+        width: 60%;
+    }
+    footer .footer-terms-policy{
+        margin: 50px 0;
+    }
+    footer .footer-partner-company img{
+        width: 80%;
+    }
+    /* Footer End */
+
+    /* Home Start */
+    #home-section .home-hero-section .row{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #home-section .home-hero-section .humanity{
+        height: 300px;
+    }
+    #home-section .cards .card-shadow{
+        width: 100%;
+    }
+    #home-section .testing-text h1{
+        font-size: 25px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    #home-section .capibilty-cards .card-1 .text h3{
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    #home-section .capibilty-cards .card-2 .text h3{
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    #home-section .capibilty-cards .card-3 .text h3{
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    #home-section .home-form .form-text h1{
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    #home-section .improve-health .image .text{
+        position: absolute;
+        top: auto;
+        left: 3%;
+        right: 3%;
+        bottom: 0;
+    }
+    #home-section .improve-health .image .text h2{
+        font-size: 14px;
+        color: #fff;
+        margin-top: 40px;
+        text-transform: uppercase;
+        text-align: right;
+    }
+    #home-section .improve-health .image .text .hr1{
+        float: right;
+        height: 5px;
+        width: 27.8%;
+        background-color: #050b50;
+    }
+    #home-section .improve-health .image .text .hr2{
+        float: right;
+        height: 5px;
+        width: 27.8%;
+        background-color: #050b50;
+    }
+    #home-section .cards .card-shadow-1{
+        margin: auto;
+    }
+    #home-section .cards .card-shadow-3{
+        margin: auto;
+        float: none;
+    }
+    #biologica-nav{
+        z-index: 99;
+    }
+    #biologica-nav .navbar-brand img{
+        width: 100%;
+    }
+    #mySidenav{
+        z-index: 999;
+    }
+    /* Home End */
+}
