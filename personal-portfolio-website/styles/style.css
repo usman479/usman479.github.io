@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Fira+Sans&family=Inter:wght@100;200;300;400;500&family=Montserrat:ital,wght@0,100;0,200;0,300;0,700;0,800;0,900;1,100;1,200;1,700;1,800;1,900&family=Source+Code+Pro:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(238, 238, 238);
+    color: rgb(58, 58, 58);
+}
+
+.sidebar {
+    position: absolute;
+    /* background-color: red; */
+    background-color: rgb(197, 197, 197);
+    /* width: 290px; */
+    font-family: 'Fira Sans', sans-serif;
+    height: 100vh;
+    transition: transform, 0.3s ease-in;
+}
+
+.sidebar nav {
+    padding: 45px;
+    font-size: 20px;
+}
+
+.sidebar nav li {
+    list-style: none;
+    padding: 20px 0 20px 0;
+    font-size: 30px;
+}
+
+.main {
+    /* background-color: yellow; */
+    width: 90vw;
+    height: 100vh;
+    /* margin-left: 20px; */
+}
+
+.container {
+    display: flex;
+}
+
+.info-container {
+    /* background-color: rgb(0, 102, 255); */
+    height: 60vh;
+    width: 80vw;
+    margin: 85px 0;
+    display: flex;
+    justify-content: space-around;
+    /* padding: 20px; */
+}
+
+.dev-pic img {
+    /* width: 250px; */
+    height: 65vh;
+}
+
+.dev-info {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 16px;
+}
+
+.hello {
+    font-size: 3em;
+}
+.name {
+    font-size: 3em;
+    font-weight: bold;
+    font-family: 'Fira Sans', sans-serif;
+}
+.about {
+    font-size: 2.5em;
+}
+
+.more-about {
+    font-size: 1.8em;
+    font-family: 'Fira Sans', sans-serif;
+    margin-top: 22px;
+}
+
+.buttons {
+    margin-top: 2.2em;
+    font-size: 16px;
+}
+
+.btn {
+    padding: 9px;
+    border-radius: 10px;
+    color: white;
+    background-color: dodgerblue;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0 7px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.btn:hover{
+    background-color: rgb(9, 90, 172);
+    color: white;
+}
+
+.sidebar nav li a {
+    text-decoration: none;
+    color: black;
+}
+
+.sidebar-go {
+    transform: translate(-443px, 0px);
+    position: absolute;
+}
+
+.btn-sm {
+    font-size: 12px;
+    margin: 7px 5px;
+    padding: 10px 18px;
+}
+
+.hamburger {
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    left: 10px;
+}
+
+.ham {
+    margin-top: 8px;
+    margin-left: 8px;
+}
+
+.cross {
+    margin-left: 195px;
+    margin-top: 8px;
+}
+
+@media (max-width: 1615px) {
+    .buttons {
+        font-size: 7px;
+    }
+   .dev-info {
+    font-size: 12px;
+   }
+    /* .dev-pic {
+        display: none;
+    } */
+
+}
+@media (max-width: 800px) {
+    .buttons {
+        font-size: 4px;
+    }
+   .dev-info {
+    font-size: 7px;
+   }
+    .dev-pic img{
+        /* display: none; */
+        height: 50vh;
+    }
+
+}
+@media (max-width: 500px) {
+    .dev-pic{
+        display: none;
+    }
+
+}

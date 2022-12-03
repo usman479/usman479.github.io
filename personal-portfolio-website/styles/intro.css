@@ -1,0 +1,60 @@
+.intro-container h2  {
+    font-family: 'Fira Sans', sans-serif;
+    margin: 12px 12px;
+    font-size: 2em;
+}
+
+.intro-container p {
+    font-family: 'Source Code Pro', monospace;
+    margin: 12px 12px;
+    font-size: 1.1em;
+}
+
+.intro-container {
+    margin: 40px 88px;
+    font-size: 16px;
+}
+
+.skill-container {
+    padding: 12px;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.skill {
+    width: 265px;
+    height: 18px;
+    background-color: red;
+    border: 2px solid black;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-family: 'Source Code Pro', monospace;
+    margin-left: 15px;
+}
+
+.hundred {
+    width: 265px;
+    background-color: blue;
+}
+
+.seventy {
+    width: 200px;
+    background-color: blue;
+}
+
+.fifty {
+    width: 125px;
+    background-color: blue;
+}
+
+@media (max-width: 1615px){
+    .intro-container {
+        margin: 50px 8px;
+    }
+}

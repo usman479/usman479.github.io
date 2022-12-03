@@ -1,0 +1,21 @@
+.blog-item{
+    margin: 10px 0 0 20px ;
+    font-family: 'Fira Sans', sans-serif;
+}
+.blog-container h1{
+    font-family: 'Fira Sans', sans-serif;
+    margin: 23px;
+}
+.blog-item p{
+    font-family: 'Source Code Pro', monospace;
+}
+
+.blog-container {
+    margin: 40px 88px;
+}
+
+@media (max-width: 1615px){
+    .blog-container {
+        margin: 50px 30px;
+    }
+}
